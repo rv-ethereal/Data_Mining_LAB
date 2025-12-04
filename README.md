@@ -217,7 +217,7 @@ git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
 ---
 
-<img src="https://contrib.rocks/image?repo=rv-ethereal/Data_Mining_LAB" alt="Contributors" />
+
 
 ## 👥 Contributors
 
