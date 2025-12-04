@@ -1,21 +1,18 @@
+# 🚀 On-Premise Data Lake with Apache Spark ETL, Apache Airflow Orchestration & Apache Superset Dashboards
 
-# <a id="readme-top"></a>
+<p align="center">
+  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" width="120" height="120">
+</p>
 
 <div align="center">
 
-<img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" width="120" height="120">
-
-# 🚀 On-Premise Data Lake with Apache Spark ETL, Apache Airflow Orchestration & Apache Superset Dashboards
-
-### **Data Mining Laboratory Project**
+**Data Mining Laboratory Project**
 
 **Under the guidance of *Prof. Sandeep Kumar Srivastava***
 
 </div>
 
 ---
-
-## 📊 GitHub Repository Badges
 
 [![Repo Stars](https://img.shields.io/github/stars/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/stargazers)
 [![Repo Forks](https://img.shields.io/github/forks/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/network/members)
@@ -25,31 +22,29 @@
 
 ---
 
-<div align="center">
-
-<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN0MjFtc2tjNWliOGpwbjlsc250NnJ2dHdlcjNiMXRmcGluOHl2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WTO8QA0mX2Cfw5vhkp/giphy.gif" width="700"/>
-</div>
+<p align="center">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN0MjFtc2tjNWliOGpwbjlsc250NnJ2dHdlcjNiMXRmcGluOHl2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WTO8QA0mX2Cfw5vhkp/giphy.gif" width="700" alt="data-engineering-gif"/>
+</p>
 
 ---
 
-## 📌 About the Project
+## ✨ Project Summary
 
-This is a **complete on-premise data engineering pipeline**, built as part of the **Data Mining Laboratory** under **Prof. Sandeep Kumar Srivastava**.
+This repository contains a **complete on-premise data engineering pipeline** built to simulate a production-like enterprise workflow on a local machine (no cloud required). The stack demonstrates ingestion, ETL, orchestration, warehousing, and BI visualization using open-source tooling.
 
-The project simulates a **real-world enterprise data system**, implemented entirely on a **local machine** (no cloud):
+Key components:
 
-* A structured **local data lake**
-* **Apache Spark** for ETL processing
-* **Apache Airflow** for scheduling & orchestration
-* **Apache Superset** for dashboards
-
-This framework provides a full workflow for **data ingestion → transformation → warehousing → visualization**.
+* Local Data Lake (raw / staging / processed)
+* Apache Spark (PySpark) ETL
+* Apache Airflow DAG-based orchestration
+* Local warehouse (Parquet / SQLite / optional PostgreSQL)
+* Apache Superset dashboards for analytics
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
-## 🏗 System Architecture Overview
+## 🏗 System Architecture (visual)
 
 ```
                       ┌──────────────────────┐
@@ -106,61 +101,40 @@ datalake/
 
 ## 🧰 Built With
 
-### **Storage**
+**Storage**
 
 * Local File System (Data Lake)
 
-### **Processing**
+**Processing**
 
-* Apache Spark
-* PySpark
+* Apache Spark (PySpark)
 
-### **Workflow Orchestration**
+**Workflow Orchestration**
 
-* Apache Airflow (DAG-based automation)
+* Apache Airflow (DAGs)
 
-### **Analytics**
+**Analytics**
 
 * Apache Superset
 
-### **Warehouse Engine**
+**Warehouse**
 
 * Parquet
-* SQLite / PostgreSQL (Optional)
+* SQLite / (PostgreSQL optional)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
-## 🔧 Detailed Workflow
+## 🔧 Workflow (detailed)
 
-### **1️⃣ Data Ingestion — Raw Zone**
+### 1️⃣ Data Ingestion — Raw Zone
 
-Sources include:
+Sources include CSV, JSON and optional API exports. Dropped into `datalake/raw/` for automated pick-up.
 
-* CSV files
-* JSON dumps
-* API exports (optional)
+### 2️⃣ Apache Airflow DAG — Pipeline Automation
 
-All files are placed inside:
-
-```
-datalake/raw/
-```
-
----
-
-### **2️⃣ Apache Airflow DAG — Pipeline Automation**
-
-Airflow manages:
-
-✔ Ingest raw files
-✔ Trigger Spark ETL job
-✔ Validate processed outputs
-✔ Load curated datasets into warehouse
-✔ Trigger Superset refresh (optional)
-
-Example DAG:
+Airflow does the orchestration (ingest → ETL → validate → load → refresh). Example DAG snippet:
 
 ```python
 with DAG('spark_etl_pipeline', schedule_interval='@daily') as dag:
@@ -171,74 +145,101 @@ with DAG('spark_etl_pipeline', schedule_interval='@daily') as dag:
     load_warehouse = BashOperator(...)
 ```
 
----
+### 3️⃣ Apache Spark ETL — Transform Phase
 
-### **3️⃣ Apache Spark ETL — Transform Phase**
-
-Spark performs:
-
-* Null and anomaly removal
-* Data type conversions
-* Feature engineering
-* Aggregations
-* Joins between datasets
-* Writing cleaned data to `/processed`
-* Writing final analytics-ready data to `/warehouse`
+Spark performs null/anomaly removal, type conversions, feature engineering, joins, aggregations and writes parquet output to `/processed` and analytics-ready tables to `/warehouse`.
 
 Example:
 
 ```python
-df = spark.read.csv("datalake/raw/sales.csv", header=True)
+df = spark.read.csv("datalake/raw/sales.csv", header=True, inferSchema=True)
 cleaned = df.dropna().withColumn("total", df.qty * df.price)
 cleaned.write.mode("overwrite").parquet("datalake/processed/sales")
 ```
 
----
+### 4️⃣ Data Warehouse — Load Phase
 
-### **4️⃣ Data Warehouse — Load Phase**
+Processed datasets are stored as parquet files or optionally as SQL tables (SQLite/Postgres) for Superset connectivity.
 
-Data stored as:
+### 5️⃣ Apache Superset — Dashboard Layer
 
-* Parquet files
-* OR SQL tables (SQLite/PostgreSQL)
+Typical dashboards:
 
----
-
-### **5️⃣ Apache Superset — Dashboard Layer**
-
-Superset builds visualizations such as:
-
-📊 Revenue by Month
-📈 Sales Trend Analysis
-🗺 Region-wise Sales Map
-📦 Top Products by Revenue
-👤 Customers by Location
-📉 Return Percentage
-
-All panels combined into a clean BI dashboard.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+* Revenue by month
+* Sales trend analysis
+* Region-wise sales map
+* Top products by revenue
+* Customer distribution by location
+* Return/Refund analysis
 
 ---
 
 ## 🎯 Final Deliverables
 
-✔ Complete On-Prem Data Lake
-✔ Spark ETL PySpark Scripts
-✔ Airflow Automated DAG
-✔ Structured Warehouse (Parquet/SQL)
-✔ Superset Dashboard (6–10 charts)
-✔ Architecture Diagram
-✔ Detailed Project Documentation + README
+* ✅ Complete On-Prem Data Lake
+* ✅ Spark ETL PySpark Scripts
+* ✅ Airflow DAG (scheduler + operators)
+* ✅ Structured Warehouse (Parquet / SQL)
+* ✅ Superset Dashboards (6–10 charts)
+* ✅ Architecture Diagram + Documentation
+
+---
+
+## 🚀 Quick Start — Add this README to your repository
+
+> **Important:** The steps below will initialize a git repo locally and push **only** to your personal branch. **Do not push to `main`**.
+
+```bash
+# Initialize a new Git repository (if not initialized)
+git init
+
+# Add all project files
+git add .
+
+# Add remote GitHub repository (one-time)
+git remote add origin https://github.com/rv-ethereal/Data_Mining_LAB.git
+
+# Commit your changes
+git commit -m "msa24021 repo push"
+
+# Create and switch to your own branch (replace with your enrollment number)
+git checkout -b msa24021
+
+# Push ONLY to your own branch — NOT to main
+git push origin msa24021
+```
+
+> If `origin` already exists and you need to update it, run:
+
+```bash
+git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
+```
+
+---
+
+<img src="https://contrib.rocks/image?repo=rv-ethereal/Data_Mining_LAB" alt="Contributors" />
+
+
+]
+
+[![Contributors](https://img.shields.io/github/contributors/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/graphs/contributors)
+
+
+
+<p align="center">
+  <img src="https://contrib.rocks/image?repo=rv-ethereal/Data_Mining_LAB" alt="Contributors"/>
+</p>
 
 ---
 
 ## 📞 Contact
 
-**Student:** (Add your name here)
-**Instructor:** *Prof. Sandeep Kumar Srivastava*
+**Student:** *Add your name here*
+
+**Instructor:** Prof. Sandeep Kumar Srivastava
+
 **Repository:** [https://github.com/rv-ethereal/Data_Mining_LAB](https://github.com/rv-ethereal/Data_Mining_LAB)
 
+---
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
