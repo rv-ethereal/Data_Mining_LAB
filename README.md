@@ -29,7 +29,7 @@
 
 ## 🎬 Dashboard Demo (GIF Preview)
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmFvaTEyM3h1czFoN25ja2U2N2l0d3gzNWMzZjMzYmx3aGg2Y3QwaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oEjI6SIIHBdRxXI40/giphy.gif" width="700"/>
+<img src="[https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmFvaTEyM3h1czFoN25ja2U2N2l0d3gzNWMzZjMzYmx3aGg2Y3QwaiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3oEjI6SIIHBdRxXI40/giphy.gif](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN0MjFtc2tjNWliOGpwbjlsc250NnJ2dHdlcjNiMXRmcGluOHl2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WTO8QA0mX2Cfw5vhkp/giphy.gif)" width="700"/>
 
 > *Replace this GIF with your own Superset dashboard screen recording later.*
 
