@@ -219,16 +219,15 @@ git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
 <img src="https://contrib.rocks/image?repo=rv-ethereal/Data_Mining_LAB" alt="Contributors" />
 
-
-]
-
-[![Contributors](https://img.shields.io/github/contributors/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/graphs/contributors)
-
-
+## 👥 Contributors
 
 <p align="center">
   <img src="https://contrib.rocks/image?repo=rv-ethereal/Data_Mining_LAB" alt="Contributors"/>
 </p>
+
+[![Contributors](https://img.shields.io/github/contributors/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/graphs/contributors)
+
+
 
 ---
 
