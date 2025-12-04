@@ -235,6 +235,8 @@ git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
 **Student:** *Add your name here*
 
+**Enrollment no:** *Add your name here*
+
 **Instructor:** Prof. Sandeep Kumar Srivastava
 
 **Repository:** [https://github.com/rv-ethereal/Data_Mining_LAB](https://github.com/rv-ethereal/Data_Mining_LAB)
