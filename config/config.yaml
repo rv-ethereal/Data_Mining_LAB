@@ -4,25 +4,15 @@ project:
   version: "1.0.0"
   author: "Susanta Kumar Mohanty"
 
-# Paths
+# Paths (Local paths for data generation)
 paths:
-  project_root: "/home/sushi/Downloads/spark-airflow-datalake-project"
-  datalake_root: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake"
-  raw: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake/raw"
-  staging: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake/staging"
-  processed: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake/processed"
-  warehouse: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake/warehouse"
-  logs: "/home/sushi/Downloads/spark-airflow-datalake-project/logs"
-
-# Docker paths (for container environment)
-paths:
-  project_root: "/opt/airflow"
-  datalake_root: "/opt/airflow/datalake"
-  raw: "/opt/airflow/datalake/raw"
-  staging: "/opt/airflow/datalake/staging"
-  processed: "/opt/airflow/datalake/processed"
-  warehouse: "/opt/airflow/datalake/warehouse"
-  logs: "/opt/airflow/logs"
+  project_root: "/mnt/c/Users/SUN/Data_Mining_LAB/spark-airflow-datalake-project"
+  datalake_root: "/mnt/c/Users/SUN/Data_Mining_LAB/spark-airflow-datalake-project/datalake"
+  raw: "/mnt/c/Users/SUN/Data_Mining_LAB/spark-airflow-datalake-project/datalake/raw"
+  staging: "/mnt/c/Users/SUN/Data_Mining_LAB/spark-airflow-datalake-project/datalake/staging"
+  processed: "/mnt/c/Users/SUN/Data_Mining_LAB/spark-airflow-datalake-project/datalake/processed"
+  warehouse: "/mnt/c/Users/SUN/Data_Mining_LAB/spark-airflow-datalake-project/datalake/warehouse"
+  logs: "/mnt/c/Users/SUN/Data_Mining_LAB/spark-airflow-datalake-project/logs"
 
 # Spark Configuration
 spark:
