@@ -1,0 +1,14 @@
+# Core dependencies
+apache-airflow==2.8.0
+pyspark==3.5.0
+pandas==2.1.4
+pyarrow==14.0.1
+
+# Database
+sqlalchemy==2.0.23
+
+# Superset
+apache-superset==3.1.0
+
+# Utilities
+python-dateutil==2.8.2

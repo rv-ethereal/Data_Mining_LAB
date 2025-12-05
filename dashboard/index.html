@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Analytics Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .dashboard-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 30px 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-card .icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .label {
+            color: #888;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .stat-card .subtext {
+            color: #888;
+            font-size: 0.875rem;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .chart-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .chart-card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .chart-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .chart-card h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .chart-card h2 .icon {
+            font-size: 1.5rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        .chart-container.tall {
+            height: 400px;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(102, 126, 234, 0.2);
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @media (max-width: 1200px) {
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #c33;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <h1>📊 Sales Analytics Dashboard</h1>
+            <p>Real-time insights from your data warehouse</p>
+        </div>
+
+        <div id="stats-container" class="stats-grid">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading dashboard data...</p>
+            </div>
+        </div>
+
+        <div id="charts-container" class="charts-grid"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        // Chart.js default configuration
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = '#666';
+
+        // Color palette
+        const colors = {
+            primary: '#667eea',
+            secondary: '#764ba2',
+            success: '#48bb78',
+            warning: '#f6ad55',
+            danger: '#f56565',
+            info: '#4299e1',
+            purple: '#9f7aea',
+            pink: '#ed64a6',
+            teal: '#38b2ac',
+            orange: '#ed8936'
+        };
+
+        const gradientColors = [
+            'rgba(102, 126, 234, 0.8)',
+            'rgba(118, 75, 162, 0.8)',
+            'rgba(72, 187, 120, 0.8)',
+            'rgba(246, 173, 85, 0.8)',
+            'rgba(66, 153, 225, 0.8)',
+            'rgba(159, 122, 234, 0.8)',
+            'rgba(237, 100, 166, 0.8)',
+            'rgba(56, 178, 172, 0.8)',
+            'rgba(237, 137, 54, 0.8)',
+            'rgba(245, 101, 101, 0.8)'
+        ];
+
+        // Load dashboard data
+        function loadDashboard() {
+            try {
+                const data = dashboardData; // Loaded from data.js
+                renderStats(data.summary_stats, data.returns_data);
+                renderCharts(data);
+            } catch (error) {
+                console.error('Error loading dashboard:', error);
+                document.getElementById('stats-container').innerHTML = `
+                    <div class="error-message">
+                        <strong>Error loading dashboard data</strong><br>
+                        ${error.message}
+                    </div>
+                `;
+            }
+        }
+
+        function renderStats(stats, returnsData) {
+            const statsHTML = `
+                <div class="stat-card">
+                    <div class="icon">💰</div>
+                    <div class="label">Total Revenue</div>
+                    <div class="value">$${stats.total_revenue.toLocaleString()}</div>
+                    <div class="subtext">Across all sales</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon">🛒</div>
+                    <div class="label">Transactions</div>
+                    <div class="value">${stats.total_transactions.toLocaleString()}</div>
+                    <div class="subtext">Total orders processed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon">👥</div>
+                    <div class="label">Customers</div>
+                    <div class="value">${stats.total_customers.toLocaleString()}</div>
+                    <div class="subtext">Active customer base</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon">📦</div>
+                    <div class="label">Products</div>
+                    <div class="value">${stats.total_products.toLocaleString()}</div>
+                    <div class="subtext">In catalog</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon">📈</div>
+                    <div class="label">Avg Transaction</div>
+                    <div class="value">$${stats.avg_transaction.toLocaleString()}</div>
+                    <div class="subtext">Per order value</div>
+                </div>
+                <div class="stat-card">
+                    <div class="icon">📉</div>
+                    <div class="label">Returns Rate</div>
+                    <div class="value">${returnsData.overall_percentage}%</div>
+                    <div class="subtext">${returnsData.returns_count} returns</div>
+                </div>
+            `;
+
+            document.getElementById('stats-container').innerHTML = statsHTML;
+        }
+
+        function renderCharts(data) {
+            const chartsContainer = document.getElementById('charts-container');
+
+            chartsContainer.innerHTML = `
+                <div class="chart-card">
+                    <h2><span class="icon">📊</span>Revenue by Month</h2>
+                    <div class="chart-container">
+                        <canvas id="revenueByMonthChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <h2><span class="icon">📈</span>Sales Trend Line</h2>
+                    <div class="chart-container">
+                        <canvas id="salesTrendChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <h2><span class="icon">🗺️</span>Sales by Region</h2>
+                    <div class="chart-container">
+                        <canvas id="salesByRegionChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <h2><span class="icon">📦</span>Top 10 Products</h2>
+                    <div class="chart-container tall">
+                        <canvas id="topProductsChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <h2><span class="icon">👤</span>Customers by Region</h2>
+                    <div class="chart-container">
+                        <canvas id="customersByCityChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <h2><span class="icon">📉</span>Returns Percentage by Month</h2>
+                    <div class="chart-container">
+                        <canvas id="returnsPercentageChart"></canvas>
+                    </div>
+                </div>
+            `;
+
+            // Create all charts
+            createRevenueByMonthChart(data.revenue_by_month);
+            createSalesTrendChart(data.sales_trend);
+            createSalesByRegionChart(data.sales_by_region);
+            createTopProductsChart(data.top_products);
+            createCustomersByCityChart(data.customers_by_city);
+            createReturnsPercentageChart(data.returns_data.monthly_data);
+        }
+
+        function createRevenueByMonthChart(data) {
+            const ctx = document.getElementById('revenueByMonthChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.map(d => d.month),
+                    datasets: [{
+                        label: 'Revenue',
+                        data: data.map(d => d.revenue),
+                        backgroundColor: colors.primary,
+                        borderRadius: 8,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => `Revenue: $${context.parsed.y.toLocaleString()}`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: (value) => '$' + value.toLocaleString()
+                            },
+                            grid: { color: 'rgba(0,0,0,0.05)' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createSalesTrendChart(data) {
+            const ctx = document.getElementById('salesTrendChart').getContext('2d');
+
+            // Sample data if too many points (show weekly aggregates)
+            let chartData = data;
+            if (data.length > 30) {
+                chartData = data.filter((_, index) => index % 7 === 0);
+            }
+
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: chartData.map(d => d.date),
+                    datasets: [{
+                        label: 'Daily Revenue',
+                        data: chartData.map(d => d.revenue),
+                        borderColor: colors.secondary,
+                        backgroundColor: 'rgba(118, 75, 162, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 3,
+                        pointRadius: 0,
+                        pointHoverRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => `Revenue: $${context.parsed.y.toLocaleString()}`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: (value) => '$' + value.toLocaleString()
+                            },
+                            grid: { color: 'rgba(0,0,0,0.05)' }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: { maxTicksLimit: 10 }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createSalesByRegionChart(data) {
+            const ctx = document.getElementById('salesByRegionChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: data.map(d => d.region),
+                    datasets: [{
+                        data: data.map(d => d.revenue),
+                        backgroundColor: gradientColors,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                padding: 15,
+                                font: { size: 12 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1);
+                                    return `${label}: $${value.toLocaleString()} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createTopProductsChart(data) {
+            const ctx = document.getElementById('topProductsChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.map(d => d.product),
+                    datasets: [{
+                        label: 'Revenue',
+                        data: data.map(d => d.revenue),
+                        backgroundColor: gradientColors,
+                        borderRadius: 8,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => `Revenue: $${context.parsed.x.toLocaleString()}`
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: (value) => '$' + value.toLocaleString()
+                            },
+                            grid: { color: 'rgba(0,0,0,0.05)' }
+                        },
+                        y: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createCustomersByCityChart(data) {
+            const ctx = document.getElementById('customersByCityChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: data.map(d => d.city),
+                    datasets: [{
+                        data: data.map(d => d.customers),
+                        backgroundColor: gradientColors,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                padding: 15,
+                                font: { size: 12 }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => {
+                                    const label = context.label || '';
+                                    const value = context.parsed || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1);
+                                    return `${label}: ${value} customers (${percentage}%)`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function createReturnsPercentageChart(data) {
+            const ctx = document.getElementById('returnsPercentageChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: data.map(d => d.month),
+                    datasets: [{
+                        label: 'Returns %',
+                        data: data.map(d => d.percentage),
+                        borderColor: colors.danger,
+                        backgroundColor: 'rgba(245, 101, 101, 0.1)',
+                        fill: true,
+                        tension: 0.4,
+                        borderWidth: 3,
+                        pointRadius: 4,
+                        pointHoverRadius: 6,
+                        pointBackgroundColor: colors.danger
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (context) => `Returns: ${context.parsed.y.toFixed(2)}%`
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: (value) => value + '%'
+                            },
+                            grid: { color: 'rgba(0,0,0,0.05)' }
+                        },
+                        x: {
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Load dashboard on page load
+        loadDashboard();
+    </script>
+</body>
+
+</html>

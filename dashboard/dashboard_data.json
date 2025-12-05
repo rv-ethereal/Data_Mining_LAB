@@ -1,0 +1,3128 @@
+{
+  "revenue_by_month": [
+    {
+      "month": "2023-01",
+      "year": 2023,
+      "month_num": 1,
+      "revenue": 66423.66,
+      "transactions": 35
+    },
+    {
+      "month": "2023-02",
+      "year": 2023,
+      "month_num": 2,
+      "revenue": 96581.74,
+      "transactions": 40
+    },
+    {
+      "month": "2023-03",
+      "year": 2023,
+      "month_num": 3,
+      "revenue": 117755.86,
+      "transactions": 46
+    },
+    {
+      "month": "2023-04",
+      "year": 2023,
+      "month_num": 4,
+      "revenue": 119871.09,
+      "transactions": 46
+    },
+    {
+      "month": "2023-05",
+      "year": 2023,
+      "month_num": 5,
+      "revenue": 81232.99,
+      "transactions": 40
+    },
+    {
+      "month": "2023-06",
+      "year": 2023,
+      "month_num": 6,
+      "revenue": 55804.32,
+      "transactions": 32
+    },
+    {
+      "month": "2023-07",
+      "year": 2023,
+      "month_num": 7,
+      "revenue": 70241.18,
+      "transactions": 32
+    },
+    {
+      "month": "2023-08",
+      "year": 2023,
+      "month_num": 8,
+      "revenue": 74569.53,
+      "transactions": 31
+    },
+    {
+      "month": "2023-09",
+      "year": 2023,
+      "month_num": 9,
+      "revenue": 76396.61,
+      "transactions": 41
+    },
+    {
+      "month": "2023-10",
+      "year": 2023,
+      "month_num": 10,
+      "revenue": 71085.53,
+      "transactions": 39
+    },
+    {
+      "month": "2023-11",
+      "year": 2023,
+      "month_num": 11,
+      "revenue": 115578.63,
+      "transactions": 36
+    },
+    {
+      "month": "2023-12",
+      "year": 2023,
+      "month_num": 12,
+      "revenue": 82361.39,
+      "transactions": 38
+    },
+    {
+      "month": "2024-01",
+      "year": 2024,
+      "month_num": 1,
+      "revenue": 103806.35,
+      "transactions": 46
+    },
+    {
+      "month": "2024-02",
+      "year": 2024,
+      "month_num": 2,
+      "revenue": 91359.49,
+      "transactions": 39
+    },
+    {
+      "month": "2024-03",
+      "year": 2024,
+      "month_num": 3,
+      "revenue": 98868.75,
+      "transactions": 52
+    },
+    {
+      "month": "2024-04",
+      "year": 2024,
+      "month_num": 4,
+      "revenue": 121639.9,
+      "transactions": 39
+    },
+    {
+      "month": "2024-05",
+      "year": 2024,
+      "month_num": 5,
+      "revenue": 98612.59,
+      "transactions": 42
+    },
+    {
+      "month": "2024-06",
+      "year": 2024,
+      "month_num": 6,
+      "revenue": 92193.34,
+      "transactions": 39
+    },
+    {
+      "month": "2024-07",
+      "year": 2024,
+      "month_num": 7,
+      "revenue": 140629.79,
+      "transactions": 63
+    },
+    {
+      "month": "2024-08",
+      "year": 2024,
+      "month_num": 8,
+      "revenue": 114655.64,
+      "transactions": 47
+    },
+    {
+      "month": "2024-09",
+      "year": 2024,
+      "month_num": 9,
+      "revenue": 87950.45,
+      "transactions": 35
+    },
+    {
+      "month": "2024-10",
+      "year": 2024,
+      "month_num": 10,
+      "revenue": 114827.0,
+      "transactions": 49
+    },
+    {
+      "month": "2024-11",
+      "year": 2024,
+      "month_num": 11,
+      "revenue": 86589.08,
+      "transactions": 44
+    },
+    {
+      "month": "2024-12",
+      "year": 2024,
+      "month_num": 12,
+      "revenue": 88865.0,
+      "transactions": 49
+    }
+  ],
+  "sales_trend": [
+    {
+      "date": "2023-01-01",
+      "revenue": 1206.79,
+      "transactions": 2
+    },
+    {
+      "date": "2023-01-02",
+      "revenue": 2887.12,
+      "transactions": 2
+    },
+    {
+      "date": "2023-01-03",
+      "revenue": 1689.84,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-04",
+      "revenue": 1602.4,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-05",
+      "revenue": 1727.0,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-06",
+      "revenue": 5401.02,
+      "transactions": 2
+    },
+    {
+      "date": "2023-01-08",
+      "revenue": 975.92,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-09",
+      "revenue": 674.82,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-11",
+      "revenue": 8496.0,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-12",
+      "revenue": 1177.47,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-13",
+      "revenue": 2240.97,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-14",
+      "revenue": 1816.74,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-15",
+      "revenue": 62.89,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-16",
+      "revenue": 860.65,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-17",
+      "revenue": 1292.46,
+      "transactions": 2
+    },
+    {
+      "date": "2023-01-18",
+      "revenue": 3700.44,
+      "transactions": 2
+    },
+    {
+      "date": "2023-01-21",
+      "revenue": 3690.1,
+      "transactions": 3
+    },
+    {
+      "date": "2023-01-22",
+      "revenue": 431.6,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-26",
+      "revenue": 527.4,
+      "transactions": 1
+    },
+    {
+      "date": "2023-01-27",
+      "revenue": 11979.54,
+      "transactions": 4
+    },
+    {
+      "date": "2023-01-29",
+      "revenue": 5595.81,
+      "transactions": 2
+    },
+    {
+      "date": "2023-01-30",
+      "revenue": 7483.15,
+      "transactions": 2
+    },
+    {
+      "date": "2023-01-31",
+      "revenue": 903.53,
+      "transactions": 1
+    },
+    {
+      "date": "2023-02-03",
+      "revenue": 10725.42,
+      "transactions": 3
+    },
+    {
+      "date": "2023-02-04",
+      "revenue": 1854.09,
+      "transactions": 1
+    },
+    {
+      "date": "2023-02-06",
+      "revenue": 2918.79,
+      "transactions": 1
+    },
+    {
+      "date": "2023-02-07",
+      "revenue": 7573.49,
+      "transactions": 2
+    },
+    {
+      "date": "2023-02-08",
+      "revenue": 4372.08,
+      "transactions": 2
+    },
+    {
+      "date": "2023-02-10",
+      "revenue": 4669.52,
+      "transactions": 1
+    },
+    {
+      "date": "2023-02-11",
+      "revenue": 4559.33,
+      "transactions": 2
+    },
+    {
+      "date": "2023-02-13",
+      "revenue": 6202.44,
+      "transactions": 2
+    },
+    {
+      "date": "2023-02-14",
+      "revenue": 2957.82,
+      "transactions": 3
+    },
+    {
+      "date": "2023-02-15",
+      "revenue": 114.18,
+      "transactions": 1
+    },
+    {
+      "date": "2023-02-16",
+      "revenue": 3488.9,
+      "transactions": 1
+    },
+    {
+      "date": "2023-02-17",
+      "revenue": 5162.7,
+      "transactions": 3
+    },
+    {
+      "date": "2023-02-18",
+      "revenue": 4585.9,
+      "transactions": 1
+    },
+    {
+      "date": "2023-02-20",
+      "revenue": 1220.85,
+      "transactions": 1
+    },
+    {
+      "date": "2023-02-21",
+      "revenue": 222.09,
+      "transactions": 1
+    },
+    {
+      "date": "2023-02-22",
+      "revenue": 7877.9,
+      "transactions": 3
+    },
+    {
+      "date": "2023-02-23",
+      "revenue": 13817.45,
+      "transactions": 4
+    },
+    {
+      "date": "2023-02-25",
+      "revenue": 8479.13,
+      "transactions": 4
+    },
+    {
+      "date": "2023-02-27",
+      "revenue": 5779.66,
+      "transactions": 4
+    },
+    {
+      "date": "2023-03-02",
+      "revenue": 4621.42,
+      "transactions": 2
+    },
+    {
+      "date": "2023-03-03",
+      "revenue": 696.07,
+      "transactions": 2
+    },
+    {
+      "date": "2023-03-04",
+      "revenue": 4769.94,
+      "transactions": 1
+    },
+    {
+      "date": "2023-03-05",
+      "revenue": 4342.88,
+      "transactions": 2
+    },
+    {
+      "date": "2023-03-06",
+      "revenue": 1322.4,
+      "transactions": 1
+    },
+    {
+      "date": "2023-03-07",
+      "revenue": 3624.24,
+      "transactions": 1
+    },
+    {
+      "date": "2023-03-09",
+      "revenue": 6008.3,
+      "transactions": 1
+    },
+    {
+      "date": "2023-03-10",
+      "revenue": 183.78,
+      "transactions": 1
+    },
+    {
+      "date": "2023-03-13",
+      "revenue": 7055.8,
+      "transactions": 1
+    },
+    {
+      "date": "2023-03-16",
+      "revenue": 12996.45,
+      "transactions": 2
+    },
+    {
+      "date": "2023-03-17",
+      "revenue": 1994.53,
+      "transactions": 3
+    },
+    {
+      "date": "2023-03-18",
+      "revenue": 7303.66,
+      "transactions": 5
+    },
+    {
+      "date": "2023-03-19",
+      "revenue": 6708.88,
+      "transactions": 2
+    },
+    {
+      "date": "2023-03-21",
+      "revenue": 3242.64,
+      "transactions": 2
+    },
+    {
+      "date": "2023-03-22",
+      "revenue": 8531.54,
+      "transactions": 4
+    },
+    {
+      "date": "2023-03-23",
+      "revenue": 2445.2,
+      "transactions": 1
+    },
+    {
+      "date": "2023-03-24",
+      "revenue": 2121.6,
+      "transactions": 1
+    },
+    {
+      "date": "2023-03-25",
+      "revenue": 13818.15,
+      "transactions": 4
+    },
+    {
+      "date": "2023-03-28",
+      "revenue": 6790.75,
+      "transactions": 2
+    },
+    {
+      "date": "2023-03-29",
+      "revenue": 9310.49,
+      "transactions": 4
+    },
+    {
+      "date": "2023-03-30",
+      "revenue": 4331.24,
+      "transactions": 2
+    },
+    {
+      "date": "2023-03-31",
+      "revenue": 5535.9,
+      "transactions": 2
+    },
+    {
+      "date": "2023-04-01",
+      "revenue": 5460.36,
+      "transactions": 2
+    },
+    {
+      "date": "2023-04-02",
+      "revenue": 3207.08,
+      "transactions": 2
+    },
+    {
+      "date": "2023-04-03",
+      "revenue": 15876.63,
+      "transactions": 3
+    },
+    {
+      "date": "2023-04-04",
+      "revenue": 3705.19,
+      "transactions": 2
+    },
+    {
+      "date": "2023-04-06",
+      "revenue": 7172.98,
+      "transactions": 2
+    },
+    {
+      "date": "2023-04-07",
+      "revenue": 3019.73,
+      "transactions": 1
+    },
+    {
+      "date": "2023-04-08",
+      "revenue": 97.79,
+      "transactions": 1
+    },
+    {
+      "date": "2023-04-09",
+      "revenue": 6015.47,
+      "transactions": 3
+    },
+    {
+      "date": "2023-04-10",
+      "revenue": 8651.9,
+      "transactions": 3
+    },
+    {
+      "date": "2023-04-12",
+      "revenue": 12244.17,
+      "transactions": 3
+    },
+    {
+      "date": "2023-04-13",
+      "revenue": 8874.03,
+      "transactions": 2
+    },
+    {
+      "date": "2023-04-15",
+      "revenue": 220.26,
+      "transactions": 1
+    },
+    {
+      "date": "2023-04-17",
+      "revenue": 4052.82,
+      "transactions": 1
+    },
+    {
+      "date": "2023-04-18",
+      "revenue": 3426.6,
+      "transactions": 3
+    },
+    {
+      "date": "2023-04-20",
+      "revenue": 10963.66,
+      "transactions": 4
+    },
+    {
+      "date": "2023-04-21",
+      "revenue": 97.8,
+      "transactions": 1
+    },
+    {
+      "date": "2023-04-22",
+      "revenue": 8852.54,
+      "transactions": 2
+    },
+    {
+      "date": "2023-04-24",
+      "revenue": 6925.35,
+      "transactions": 2
+    },
+    {
+      "date": "2023-04-26",
+      "revenue": 2924.83,
+      "transactions": 2
+    },
+    {
+      "date": "2023-04-27",
+      "revenue": 7573.66,
+      "transactions": 5
+    },
+    {
+      "date": "2023-04-30",
+      "revenue": 508.24,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-01",
+      "revenue": 13807.18,
+      "transactions": 4
+    },
+    {
+      "date": "2023-05-02",
+      "revenue": 848.01,
+      "transactions": 2
+    },
+    {
+      "date": "2023-05-03",
+      "revenue": 2652.15,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-04",
+      "revenue": 6139.52,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-05",
+      "revenue": 1109.92,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-06",
+      "revenue": 548.36,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-08",
+      "revenue": 844.38,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-09",
+      "revenue": 1125.74,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-10",
+      "revenue": 2497.22,
+      "transactions": 2
+    },
+    {
+      "date": "2023-05-12",
+      "revenue": 1988.6,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-13",
+      "revenue": 212.98,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-15",
+      "revenue": 455.97,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-16",
+      "revenue": 5261.13,
+      "transactions": 3
+    },
+    {
+      "date": "2023-05-17",
+      "revenue": 5438.74,
+      "transactions": 2
+    },
+    {
+      "date": "2023-05-18",
+      "revenue": 6054.48,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-19",
+      "revenue": 3599.1,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-20",
+      "revenue": 2221.59,
+      "transactions": 2
+    },
+    {
+      "date": "2023-05-21",
+      "revenue": 6680.89,
+      "transactions": 3
+    },
+    {
+      "date": "2023-05-23",
+      "revenue": 2886.32,
+      "transactions": 2
+    },
+    {
+      "date": "2023-05-24",
+      "revenue": 1029.82,
+      "transactions": 2
+    },
+    {
+      "date": "2023-05-25",
+      "revenue": 2199.82,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-26",
+      "revenue": 9064.67,
+      "transactions": 2
+    },
+    {
+      "date": "2023-05-27",
+      "revenue": 2654.4,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-29",
+      "revenue": 407.08,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-30",
+      "revenue": 556.08,
+      "transactions": 1
+    },
+    {
+      "date": "2023-05-31",
+      "revenue": 948.84,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-02",
+      "revenue": 1229.64,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-03",
+      "revenue": 4903.0,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-04",
+      "revenue": 4283.44,
+      "transactions": 3
+    },
+    {
+      "date": "2023-06-06",
+      "revenue": 4667.92,
+      "transactions": 3
+    },
+    {
+      "date": "2023-06-08",
+      "revenue": 938.4,
+      "transactions": 2
+    },
+    {
+      "date": "2023-06-10",
+      "revenue": 2841.44,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-11",
+      "revenue": 124.32,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-12",
+      "revenue": 980.36,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-13",
+      "revenue": 667.16,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-14",
+      "revenue": 3143.55,
+      "transactions": 3
+    },
+    {
+      "date": "2023-06-17",
+      "revenue": 1094.8,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-18",
+      "revenue": 3500.32,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-19",
+      "revenue": 2961.29,
+      "transactions": 2
+    },
+    {
+      "date": "2023-06-22",
+      "revenue": 181.64,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-23",
+      "revenue": 7020.44,
+      "transactions": 3
+    },
+    {
+      "date": "2023-06-24",
+      "revenue": 5779.45,
+      "transactions": 2
+    },
+    {
+      "date": "2023-06-26",
+      "revenue": 383.7,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-27",
+      "revenue": 785.88,
+      "transactions": 1
+    },
+    {
+      "date": "2023-06-28",
+      "revenue": 4518.37,
+      "transactions": 2
+    },
+    {
+      "date": "2023-06-29",
+      "revenue": 5799.2,
+      "transactions": 1
+    },
+    {
+      "date": "2023-07-01",
+      "revenue": 5479.38,
+      "transactions": 3
+    },
+    {
+      "date": "2023-07-04",
+      "revenue": 12137.8,
+      "transactions": 4
+    },
+    {
+      "date": "2023-07-05",
+      "revenue": 9245.14,
+      "transactions": 2
+    },
+    {
+      "date": "2023-07-11",
+      "revenue": 6068.28,
+      "transactions": 2
+    },
+    {
+      "date": "2023-07-14",
+      "revenue": 2258.82,
+      "transactions": 1
+    },
+    {
+      "date": "2023-07-15",
+      "revenue": 1467.45,
+      "transactions": 2
+    },
+    {
+      "date": "2023-07-16",
+      "revenue": 5514.29,
+      "transactions": 2
+    },
+    {
+      "date": "2023-07-18",
+      "revenue": 6400.08,
+      "transactions": 2
+    },
+    {
+      "date": "2023-07-20",
+      "revenue": 346.53,
+      "transactions": 1
+    },
+    {
+      "date": "2023-07-22",
+      "revenue": 4741.96,
+      "transactions": 3
+    },
+    {
+      "date": "2023-07-23",
+      "revenue": 1246.82,
+      "transactions": 2
+    },
+    {
+      "date": "2023-07-24",
+      "revenue": 3251.71,
+      "transactions": 2
+    },
+    {
+      "date": "2023-07-25",
+      "revenue": 2385.6,
+      "transactions": 1
+    },
+    {
+      "date": "2023-07-26",
+      "revenue": 2043.9,
+      "transactions": 1
+    },
+    {
+      "date": "2023-07-28",
+      "revenue": 4075.9,
+      "transactions": 2
+    },
+    {
+      "date": "2023-07-29",
+      "revenue": 487.44,
+      "transactions": 1
+    },
+    {
+      "date": "2023-07-30",
+      "revenue": 3090.08,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-01",
+      "revenue": 5716.42,
+      "transactions": 2
+    },
+    {
+      "date": "2023-08-07",
+      "revenue": 5236.26,
+      "transactions": 2
+    },
+    {
+      "date": "2023-08-08",
+      "revenue": 1954.68,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-09",
+      "revenue": 1301.96,
+      "transactions": 2
+    },
+    {
+      "date": "2023-08-10",
+      "revenue": 6719.2,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-11",
+      "revenue": 3342.76,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-12",
+      "revenue": 738.99,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-14",
+      "revenue": 2911.8,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-15",
+      "revenue": 3019.45,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-16",
+      "revenue": 11352.85,
+      "transactions": 5
+    },
+    {
+      "date": "2023-08-17",
+      "revenue": 3848.11,
+      "transactions": 3
+    },
+    {
+      "date": "2023-08-22",
+      "revenue": 6828.32,
+      "transactions": 2
+    },
+    {
+      "date": "2023-08-24",
+      "revenue": 1413.96,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-26",
+      "revenue": 512.82,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-27",
+      "revenue": 1694.34,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-28",
+      "revenue": 561.0,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-29",
+      "revenue": 8882.26,
+      "transactions": 2
+    },
+    {
+      "date": "2023-08-30",
+      "revenue": 4353.35,
+      "transactions": 1
+    },
+    {
+      "date": "2023-08-31",
+      "revenue": 4181.0,
+      "transactions": 2
+    },
+    {
+      "date": "2023-09-01",
+      "revenue": 1112.51,
+      "transactions": 2
+    },
+    {
+      "date": "2023-09-02",
+      "revenue": 2148.49,
+      "transactions": 2
+    },
+    {
+      "date": "2023-09-03",
+      "revenue": 2273.65,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-04",
+      "revenue": 5041.17,
+      "transactions": 2
+    },
+    {
+      "date": "2023-09-05",
+      "revenue": 7704.5,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-06",
+      "revenue": 5643.41,
+      "transactions": 3
+    },
+    {
+      "date": "2023-09-07",
+      "revenue": 5242.87,
+      "transactions": 4
+    },
+    {
+      "date": "2023-09-08",
+      "revenue": 952.1,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-09",
+      "revenue": 141.84,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-10",
+      "revenue": 868.64,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-11",
+      "revenue": 1378.28,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-12",
+      "revenue": 1200.42,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-13",
+      "revenue": 7933.18,
+      "transactions": 3
+    },
+    {
+      "date": "2023-09-14",
+      "revenue": 5609.7,
+      "transactions": 2
+    },
+    {
+      "date": "2023-09-15",
+      "revenue": 7243.14,
+      "transactions": 2
+    },
+    {
+      "date": "2023-09-16",
+      "revenue": 1140.54,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-19",
+      "revenue": 1057.06,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-22",
+      "revenue": 8579.8,
+      "transactions": 4
+    },
+    {
+      "date": "2023-09-26",
+      "revenue": 728.08,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-27",
+      "revenue": 576.96,
+      "transactions": 1
+    },
+    {
+      "date": "2023-09-28",
+      "revenue": 3533.63,
+      "transactions": 3
+    },
+    {
+      "date": "2023-09-29",
+      "revenue": 6286.64,
+      "transactions": 3
+    },
+    {
+      "date": "2023-10-01",
+      "revenue": 490.36,
+      "transactions": 1
+    },
+    {
+      "date": "2023-10-03",
+      "revenue": 1808.21,
+      "transactions": 2
+    },
+    {
+      "date": "2023-10-04",
+      "revenue": 4599.46,
+      "transactions": 2
+    },
+    {
+      "date": "2023-10-06",
+      "revenue": 4275.15,
+      "transactions": 3
+    },
+    {
+      "date": "2023-10-07",
+      "revenue": 875.6,
+      "transactions": 1
+    },
+    {
+      "date": "2023-10-08",
+      "revenue": 4776.62,
+      "transactions": 2
+    },
+    {
+      "date": "2023-10-09",
+      "revenue": 2007.72,
+      "transactions": 2
+    },
+    {
+      "date": "2023-10-10",
+      "revenue": 6321.36,
+      "transactions": 2
+    },
+    {
+      "date": "2023-10-11",
+      "revenue": 7209.54,
+      "transactions": 2
+    },
+    {
+      "date": "2023-10-12",
+      "revenue": 3295.36,
+      "transactions": 2
+    },
+    {
+      "date": "2023-10-13",
+      "revenue": 414.0,
+      "transactions": 1
+    },
+    {
+      "date": "2023-10-15",
+      "revenue": 1986.6,
+      "transactions": 1
+    },
+    {
+      "date": "2023-10-16",
+      "revenue": 551.53,
+      "transactions": 1
+    },
+    {
+      "date": "2023-10-17",
+      "revenue": 3613.08,
+      "transactions": 1
+    },
+    {
+      "date": "2023-10-19",
+      "revenue": 1212.63,
+      "transactions": 1
+    },
+    {
+      "date": "2023-10-22",
+      "revenue": 4182.92,
+      "transactions": 2
+    },
+    {
+      "date": "2023-10-23",
+      "revenue": 9216.59,
+      "transactions": 3
+    },
+    {
+      "date": "2023-10-24",
+      "revenue": 3366.22,
+      "transactions": 2
+    },
+    {
+      "date": "2023-10-26",
+      "revenue": 1435.7,
+      "transactions": 1
+    },
+    {
+      "date": "2023-10-29",
+      "revenue": 689.76,
+      "transactions": 1
+    },
+    {
+      "date": "2023-10-30",
+      "revenue": 7543.83,
+      "transactions": 5
+    },
+    {
+      "date": "2023-10-31",
+      "revenue": 1213.29,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-01",
+      "revenue": 3428.76,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-02",
+      "revenue": 2962.35,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-03",
+      "revenue": 11297.7,
+      "transactions": 2
+    },
+    {
+      "date": "2023-11-04",
+      "revenue": 832.14,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-05",
+      "revenue": 6634.59,
+      "transactions": 2
+    },
+    {
+      "date": "2023-11-06",
+      "revenue": 12691.16,
+      "transactions": 3
+    },
+    {
+      "date": "2023-11-07",
+      "revenue": 1557.21,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-09",
+      "revenue": 2335.35,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-11",
+      "revenue": 6663.9,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-12",
+      "revenue": 4062.06,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-13",
+      "revenue": 7301.19,
+      "transactions": 3
+    },
+    {
+      "date": "2023-11-14",
+      "revenue": 746.88,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-15",
+      "revenue": 4767.39,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-16",
+      "revenue": 3207.54,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-17",
+      "revenue": 12272.02,
+      "transactions": 3
+    },
+    {
+      "date": "2023-11-18",
+      "revenue": 1328.31,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-19",
+      "revenue": 5171.42,
+      "transactions": 2
+    },
+    {
+      "date": "2023-11-22",
+      "revenue": 1475.4,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-23",
+      "revenue": 1585.39,
+      "transactions": 2
+    },
+    {
+      "date": "2023-11-25",
+      "revenue": 7555.95,
+      "transactions": 2
+    },
+    {
+      "date": "2023-11-26",
+      "revenue": 2601.83,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-28",
+      "revenue": 1499.04,
+      "transactions": 1
+    },
+    {
+      "date": "2023-11-29",
+      "revenue": 13601.05,
+      "transactions": 3
+    },
+    {
+      "date": "2023-12-02",
+      "revenue": 2414.88,
+      "transactions": 2
+    },
+    {
+      "date": "2023-12-03",
+      "revenue": 7431.52,
+      "transactions": 2
+    },
+    {
+      "date": "2023-12-04",
+      "revenue": 5750.57,
+      "transactions": 1
+    },
+    {
+      "date": "2023-12-05",
+      "revenue": 742.7,
+      "transactions": 1
+    },
+    {
+      "date": "2023-12-06",
+      "revenue": 12679.46,
+      "transactions": 4
+    },
+    {
+      "date": "2023-12-07",
+      "revenue": 4955.6,
+      "transactions": 3
+    },
+    {
+      "date": "2023-12-11",
+      "revenue": 533.01,
+      "transactions": 1
+    },
+    {
+      "date": "2023-12-12",
+      "revenue": 1557.3,
+      "transactions": 2
+    },
+    {
+      "date": "2023-12-17",
+      "revenue": 4525.5,
+      "transactions": 1
+    },
+    {
+      "date": "2023-12-18",
+      "revenue": 6670.95,
+      "transactions": 4
+    },
+    {
+      "date": "2023-12-19",
+      "revenue": 3147.25,
+      "transactions": 3
+    },
+    {
+      "date": "2023-12-20",
+      "revenue": 4532.3,
+      "transactions": 1
+    },
+    {
+      "date": "2023-12-21",
+      "revenue": 11484.6,
+      "transactions": 2
+    },
+    {
+      "date": "2023-12-22",
+      "revenue": 363.75,
+      "transactions": 1
+    },
+    {
+      "date": "2023-12-25",
+      "revenue": 1023.82,
+      "transactions": 1
+    },
+    {
+      "date": "2023-12-26",
+      "revenue": 4818.28,
+      "transactions": 2
+    },
+    {
+      "date": "2023-12-27",
+      "revenue": 6805.42,
+      "transactions": 5
+    },
+    {
+      "date": "2023-12-30",
+      "revenue": 2924.48,
+      "transactions": 2
+    },
+    {
+      "date": "2024-01-01",
+      "revenue": 1802.76,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-04",
+      "revenue": 14935.01,
+      "transactions": 4
+    },
+    {
+      "date": "2024-01-05",
+      "revenue": 808.02,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-06",
+      "revenue": 2124.3,
+      "transactions": 3
+    },
+    {
+      "date": "2024-01-08",
+      "revenue": 5525.35,
+      "transactions": 2
+    },
+    {
+      "date": "2024-01-10",
+      "revenue": 735.08,
+      "transactions": 2
+    },
+    {
+      "date": "2024-01-11",
+      "revenue": 153.48,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-12",
+      "revenue": 1141.98,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-13",
+      "revenue": 11456.39,
+      "transactions": 3
+    },
+    {
+      "date": "2024-01-14",
+      "revenue": 599.9,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-15",
+      "revenue": 2366.38,
+      "transactions": 3
+    },
+    {
+      "date": "2024-01-16",
+      "revenue": 1471.62,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-18",
+      "revenue": 270.99,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-20",
+      "revenue": 2080.0,
+      "transactions": 2
+    },
+    {
+      "date": "2024-01-21",
+      "revenue": 1435.95,
+      "transactions": 2
+    },
+    {
+      "date": "2024-01-22",
+      "revenue": 6778.65,
+      "transactions": 3
+    },
+    {
+      "date": "2024-01-23",
+      "revenue": 1293.56,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-24",
+      "revenue": 23825.95,
+      "transactions": 6
+    },
+    {
+      "date": "2024-01-25",
+      "revenue": 3211.3,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-26",
+      "revenue": 1654.32,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-27",
+      "revenue": 6396.02,
+      "transactions": 2
+    },
+    {
+      "date": "2024-01-28",
+      "revenue": 7289.2,
+      "transactions": 2
+    },
+    {
+      "date": "2024-01-29",
+      "revenue": 990.54,
+      "transactions": 1
+    },
+    {
+      "date": "2024-01-31",
+      "revenue": 5459.6,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-01",
+      "revenue": 4421.47,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-02",
+      "revenue": 8847.27,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-05",
+      "revenue": 1407.1,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-07",
+      "revenue": 6729.4,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-08",
+      "revenue": 1314.42,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-09",
+      "revenue": 4857.65,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-10",
+      "revenue": 6430.39,
+      "transactions": 3
+    },
+    {
+      "date": "2024-02-11",
+      "revenue": 835.23,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-12",
+      "revenue": 8403.05,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-14",
+      "revenue": 1311.31,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-15",
+      "revenue": 4376.0,
+      "transactions": 3
+    },
+    {
+      "date": "2024-02-16",
+      "revenue": 9305.66,
+      "transactions": 3
+    },
+    {
+      "date": "2024-02-17",
+      "revenue": 1503.5,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-18",
+      "revenue": 3497.75,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-21",
+      "revenue": 4420.95,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-22",
+      "revenue": 894.46,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-23",
+      "revenue": 2780.75,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-24",
+      "revenue": 3188.17,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-25",
+      "revenue": 4976.34,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-26",
+      "revenue": 1581.54,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-27",
+      "revenue": 3689.46,
+      "transactions": 1
+    },
+    {
+      "date": "2024-02-28",
+      "revenue": 5609.64,
+      "transactions": 2
+    },
+    {
+      "date": "2024-02-29",
+      "revenue": 977.98,
+      "transactions": 1
+    },
+    {
+      "date": "2024-03-01",
+      "revenue": 4634.31,
+      "transactions": 3
+    },
+    {
+      "date": "2024-03-02",
+      "revenue": 7179.15,
+      "transactions": 3
+    },
+    {
+      "date": "2024-03-03",
+      "revenue": 1149.2,
+      "transactions": 1
+    },
+    {
+      "date": "2024-03-04",
+      "revenue": 4836.18,
+      "transactions": 3
+    },
+    {
+      "date": "2024-03-05",
+      "revenue": 4218.54,
+      "transactions": 4
+    },
+    {
+      "date": "2024-03-06",
+      "revenue": 11942.06,
+      "transactions": 2
+    },
+    {
+      "date": "2024-03-08",
+      "revenue": 907.76,
+      "transactions": 2
+    },
+    {
+      "date": "2024-03-09",
+      "revenue": 1129.5,
+      "transactions": 3
+    },
+    {
+      "date": "2024-03-10",
+      "revenue": 3252.99,
+      "transactions": 2
+    },
+    {
+      "date": "2024-03-12",
+      "revenue": 6181.28,
+      "transactions": 1
+    },
+    {
+      "date": "2024-03-13",
+      "revenue": 1359.54,
+      "transactions": 2
+    },
+    {
+      "date": "2024-03-14",
+      "revenue": 1774.77,
+      "transactions": 2
+    },
+    {
+      "date": "2024-03-15",
+      "revenue": 5110.5,
+      "transactions": 1
+    },
+    {
+      "date": "2024-03-16",
+      "revenue": 4840.64,
+      "transactions": 1
+    },
+    {
+      "date": "2024-03-19",
+      "revenue": 4118.38,
+      "transactions": 1
+    },
+    {
+      "date": "2024-03-20",
+      "revenue": 9051.04,
+      "transactions": 4
+    },
+    {
+      "date": "2024-03-21",
+      "revenue": 2934.79,
+      "transactions": 3
+    },
+    {
+      "date": "2024-03-23",
+      "revenue": 1326.58,
+      "transactions": 2
+    },
+    {
+      "date": "2024-03-24",
+      "revenue": 1158.36,
+      "transactions": 1
+    },
+    {
+      "date": "2024-03-25",
+      "revenue": 3577.8,
+      "transactions": 1
+    },
+    {
+      "date": "2024-03-27",
+      "revenue": 2315.32,
+      "transactions": 2
+    },
+    {
+      "date": "2024-03-28",
+      "revenue": 9278.28,
+      "transactions": 4
+    },
+    {
+      "date": "2024-03-29",
+      "revenue": 3036.3,
+      "transactions": 1
+    },
+    {
+      "date": "2024-03-30",
+      "revenue": 3307.92,
+      "transactions": 2
+    },
+    {
+      "date": "2024-03-31",
+      "revenue": 247.56,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-01",
+      "revenue": 1461.0,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-02",
+      "revenue": 746.64,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-04",
+      "revenue": 8917.83,
+      "transactions": 3
+    },
+    {
+      "date": "2024-04-06",
+      "revenue": 9827.9,
+      "transactions": 3
+    },
+    {
+      "date": "2024-04-07",
+      "revenue": 6796.88,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-09",
+      "revenue": 1196.8,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-12",
+      "revenue": 7253.12,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-13",
+      "revenue": 5649.08,
+      "transactions": 2
+    },
+    {
+      "date": "2024-04-14",
+      "revenue": 1777.26,
+      "transactions": 2
+    },
+    {
+      "date": "2024-04-15",
+      "revenue": 618.45,
+      "transactions": 2
+    },
+    {
+      "date": "2024-04-17",
+      "revenue": 14579.21,
+      "transactions": 3
+    },
+    {
+      "date": "2024-04-18",
+      "revenue": 3524.8,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-19",
+      "revenue": 14620.52,
+      "transactions": 2
+    },
+    {
+      "date": "2024-04-21",
+      "revenue": 3290.39,
+      "transactions": 3
+    },
+    {
+      "date": "2024-04-22",
+      "revenue": 5651.02,
+      "transactions": 2
+    },
+    {
+      "date": "2024-04-23",
+      "revenue": 3870.9,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-24",
+      "revenue": 1443.34,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-25",
+      "revenue": 8370.42,
+      "transactions": 2
+    },
+    {
+      "date": "2024-04-26",
+      "revenue": 787.32,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-27",
+      "revenue": 6344.08,
+      "transactions": 3
+    },
+    {
+      "date": "2024-04-28",
+      "revenue": 1090.8,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-29",
+      "revenue": 9521.4,
+      "transactions": 1
+    },
+    {
+      "date": "2024-04-30",
+      "revenue": 4300.74,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-01",
+      "revenue": 3320.64,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-02",
+      "revenue": 4081.24,
+      "transactions": 2
+    },
+    {
+      "date": "2024-05-03",
+      "revenue": 2434.56,
+      "transactions": 3
+    },
+    {
+      "date": "2024-05-05",
+      "revenue": 8895.3,
+      "transactions": 4
+    },
+    {
+      "date": "2024-05-08",
+      "revenue": 5384.24,
+      "transactions": 2
+    },
+    {
+      "date": "2024-05-09",
+      "revenue": 8173.04,
+      "transactions": 2
+    },
+    {
+      "date": "2024-05-10",
+      "revenue": 9763.0,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-11",
+      "revenue": 13518.87,
+      "transactions": 3
+    },
+    {
+      "date": "2024-05-12",
+      "revenue": 1610.55,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-14",
+      "revenue": 1065.1,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-15",
+      "revenue": 3346.8,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-16",
+      "revenue": 1334.54,
+      "transactions": 2
+    },
+    {
+      "date": "2024-05-17",
+      "revenue": 4596.5,
+      "transactions": 3
+    },
+    {
+      "date": "2024-05-18",
+      "revenue": 335.82,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-19",
+      "revenue": 3511.79,
+      "transactions": 2
+    },
+    {
+      "date": "2024-05-20",
+      "revenue": 3494.84,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-21",
+      "revenue": 11262.22,
+      "transactions": 3
+    },
+    {
+      "date": "2024-05-23",
+      "revenue": 1323.32,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-25",
+      "revenue": 209.63,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-26",
+      "revenue": 499.18,
+      "transactions": 1
+    },
+    {
+      "date": "2024-05-28",
+      "revenue": 2840.2,
+      "transactions": 2
+    },
+    {
+      "date": "2024-05-29",
+      "revenue": 3653.3,
+      "transactions": 2
+    },
+    {
+      "date": "2024-05-31",
+      "revenue": 3957.91,
+      "transactions": 2
+    },
+    {
+      "date": "2024-06-01",
+      "revenue": 1717.58,
+      "transactions": 3
+    },
+    {
+      "date": "2024-06-02",
+      "revenue": 7069.68,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-03",
+      "revenue": 10962.8,
+      "transactions": 3
+    },
+    {
+      "date": "2024-06-04",
+      "revenue": 2694.72,
+      "transactions": 2
+    },
+    {
+      "date": "2024-06-05",
+      "revenue": 5440.86,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-06",
+      "revenue": 4632.0,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-09",
+      "revenue": 1722.86,
+      "transactions": 2
+    },
+    {
+      "date": "2024-06-10",
+      "revenue": 1418.91,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-11",
+      "revenue": 1937.53,
+      "transactions": 2
+    },
+    {
+      "date": "2024-06-13",
+      "revenue": 4075.95,
+      "transactions": 2
+    },
+    {
+      "date": "2024-06-14",
+      "revenue": 8001.66,
+      "transactions": 2
+    },
+    {
+      "date": "2024-06-15",
+      "revenue": 4357.01,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-16",
+      "revenue": 1336.2,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-17",
+      "revenue": 3527.75,
+      "transactions": 3
+    },
+    {
+      "date": "2024-06-18",
+      "revenue": 214.0,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-19",
+      "revenue": 3973.84,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-20",
+      "revenue": 244.02,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-21",
+      "revenue": 1284.02,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-23",
+      "revenue": 8546.88,
+      "transactions": 3
+    },
+    {
+      "date": "2024-06-26",
+      "revenue": 9719.6,
+      "transactions": 2
+    },
+    {
+      "date": "2024-06-27",
+      "revenue": 2975.13,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-28",
+      "revenue": 844.39,
+      "transactions": 2
+    },
+    {
+      "date": "2024-06-29",
+      "revenue": 5414.3,
+      "transactions": 1
+    },
+    {
+      "date": "2024-06-30",
+      "revenue": 81.65,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-01",
+      "revenue": 5651.11,
+      "transactions": 2
+    },
+    {
+      "date": "2024-07-02",
+      "revenue": 1368.51,
+      "transactions": 2
+    },
+    {
+      "date": "2024-07-03",
+      "revenue": 6873.66,
+      "transactions": 2
+    },
+    {
+      "date": "2024-07-04",
+      "revenue": 10627.73,
+      "transactions": 5
+    },
+    {
+      "date": "2024-07-05",
+      "revenue": 9684.16,
+      "transactions": 3
+    },
+    {
+      "date": "2024-07-06",
+      "revenue": 1679.43,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-07",
+      "revenue": 345.5,
+      "transactions": 2
+    },
+    {
+      "date": "2024-07-09",
+      "revenue": 127.98,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-10",
+      "revenue": 6727.64,
+      "transactions": 5
+    },
+    {
+      "date": "2024-07-11",
+      "revenue": 3955.62,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-12",
+      "revenue": 4675.32,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-13",
+      "revenue": 1115.33,
+      "transactions": 2
+    },
+    {
+      "date": "2024-07-14",
+      "revenue": 3053.0,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-15",
+      "revenue": 4239.62,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-16",
+      "revenue": 5521.56,
+      "transactions": 2
+    },
+    {
+      "date": "2024-07-17",
+      "revenue": 14746.97,
+      "transactions": 5
+    },
+    {
+      "date": "2024-07-18",
+      "revenue": 837.18,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-19",
+      "revenue": 85.36,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-20",
+      "revenue": 2534.41,
+      "transactions": 2
+    },
+    {
+      "date": "2024-07-21",
+      "revenue": 4016.75,
+      "transactions": 2
+    },
+    {
+      "date": "2024-07-23",
+      "revenue": 13217.31,
+      "transactions": 3
+    },
+    {
+      "date": "2024-07-24",
+      "revenue": 2478.9,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-25",
+      "revenue": 662.93,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-26",
+      "revenue": 7257.26,
+      "transactions": 3
+    },
+    {
+      "date": "2024-07-27",
+      "revenue": 839.6,
+      "transactions": 1
+    },
+    {
+      "date": "2024-07-28",
+      "revenue": 5748.92,
+      "transactions": 2
+    },
+    {
+      "date": "2024-07-29",
+      "revenue": 12308.34,
+      "transactions": 3
+    },
+    {
+      "date": "2024-07-30",
+      "revenue": 5200.96,
+      "transactions": 3
+    },
+    {
+      "date": "2024-07-31",
+      "revenue": 5048.73,
+      "transactions": 4
+    },
+    {
+      "date": "2024-08-01",
+      "revenue": 853.56,
+      "transactions": 2
+    },
+    {
+      "date": "2024-08-02",
+      "revenue": 13174.92,
+      "transactions": 3
+    },
+    {
+      "date": "2024-08-03",
+      "revenue": 4227.03,
+      "transactions": 1
+    },
+    {
+      "date": "2024-08-05",
+      "revenue": 2219.13,
+      "transactions": 1
+    },
+    {
+      "date": "2024-08-06",
+      "revenue": 9325.32,
+      "transactions": 3
+    },
+    {
+      "date": "2024-08-08",
+      "revenue": 4537.97,
+      "transactions": 5
+    },
+    {
+      "date": "2024-08-09",
+      "revenue": 10949.16,
+      "transactions": 3
+    },
+    {
+      "date": "2024-08-11",
+      "revenue": 1647.15,
+      "transactions": 1
+    },
+    {
+      "date": "2024-08-12",
+      "revenue": 6152.0,
+      "transactions": 1
+    },
+    {
+      "date": "2024-08-13",
+      "revenue": 3155.27,
+      "transactions": 3
+    },
+    {
+      "date": "2024-08-14",
+      "revenue": 5218.08,
+      "transactions": 2
+    },
+    {
+      "date": "2024-08-16",
+      "revenue": 3244.98,
+      "transactions": 1
+    },
+    {
+      "date": "2024-08-17",
+      "revenue": 471.43,
+      "transactions": 1
+    },
+    {
+      "date": "2024-08-19",
+      "revenue": 11206.7,
+      "transactions": 2
+    },
+    {
+      "date": "2024-08-20",
+      "revenue": 1329.67,
+      "transactions": 2
+    },
+    {
+      "date": "2024-08-21",
+      "revenue": 314.28,
+      "transactions": 1
+    },
+    {
+      "date": "2024-08-22",
+      "revenue": 1015.28,
+      "transactions": 1
+    },
+    {
+      "date": "2024-08-24",
+      "revenue": 11932.26,
+      "transactions": 2
+    },
+    {
+      "date": "2024-08-25",
+      "revenue": 5604.48,
+      "transactions": 4
+    },
+    {
+      "date": "2024-08-26",
+      "revenue": 5051.96,
+      "transactions": 2
+    },
+    {
+      "date": "2024-08-27",
+      "revenue": 4697.79,
+      "transactions": 2
+    },
+    {
+      "date": "2024-08-29",
+      "revenue": 4289.68,
+      "transactions": 2
+    },
+    {
+      "date": "2024-08-31",
+      "revenue": 4037.54,
+      "transactions": 2
+    },
+    {
+      "date": "2024-09-02",
+      "revenue": 6752.38,
+      "transactions": 3
+    },
+    {
+      "date": "2024-09-03",
+      "revenue": 6610.2,
+      "transactions": 2
+    },
+    {
+      "date": "2024-09-04",
+      "revenue": 3934.29,
+      "transactions": 2
+    },
+    {
+      "date": "2024-09-06",
+      "revenue": 4319.76,
+      "transactions": 1
+    },
+    {
+      "date": "2024-09-07",
+      "revenue": 5100.45,
+      "transactions": 2
+    },
+    {
+      "date": "2024-09-08",
+      "revenue": 6514.5,
+      "transactions": 3
+    },
+    {
+      "date": "2024-09-09",
+      "revenue": 1594.92,
+      "transactions": 1
+    },
+    {
+      "date": "2024-09-12",
+      "revenue": 11891.76,
+      "transactions": 3
+    },
+    {
+      "date": "2024-09-13",
+      "revenue": 2348.16,
+      "transactions": 2
+    },
+    {
+      "date": "2024-09-16",
+      "revenue": 866.04,
+      "transactions": 1
+    },
+    {
+      "date": "2024-09-17",
+      "revenue": 5994.0,
+      "transactions": 1
+    },
+    {
+      "date": "2024-09-20",
+      "revenue": 6259.3,
+      "transactions": 1
+    },
+    {
+      "date": "2024-09-22",
+      "revenue": 3173.88,
+      "transactions": 3
+    },
+    {
+      "date": "2024-09-23",
+      "revenue": 87.3,
+      "transactions": 1
+    },
+    {
+      "date": "2024-09-24",
+      "revenue": 7376.07,
+      "transactions": 2
+    },
+    {
+      "date": "2024-09-25",
+      "revenue": 748.52,
+      "transactions": 1
+    },
+    {
+      "date": "2024-09-26",
+      "revenue": 11080.22,
+      "transactions": 4
+    },
+    {
+      "date": "2024-09-27",
+      "revenue": 357.92,
+      "transactions": 1
+    },
+    {
+      "date": "2024-09-29",
+      "revenue": 2940.78,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-02",
+      "revenue": 1582.82,
+      "transactions": 2
+    },
+    {
+      "date": "2024-10-03",
+      "revenue": 637.1,
+      "transactions": 2
+    },
+    {
+      "date": "2024-10-04",
+      "revenue": 4175.85,
+      "transactions": 3
+    },
+    {
+      "date": "2024-10-06",
+      "revenue": 7887.18,
+      "transactions": 2
+    },
+    {
+      "date": "2024-10-07",
+      "revenue": 1209.35,
+      "transactions": 2
+    },
+    {
+      "date": "2024-10-08",
+      "revenue": 3138.64,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-10",
+      "revenue": 8430.18,
+      "transactions": 3
+    },
+    {
+      "date": "2024-10-11",
+      "revenue": 1016.52,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-12",
+      "revenue": 371.67,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-14",
+      "revenue": 8005.71,
+      "transactions": 2
+    },
+    {
+      "date": "2024-10-15",
+      "revenue": 6735.56,
+      "transactions": 2
+    },
+    {
+      "date": "2024-10-16",
+      "revenue": 12134.14,
+      "transactions": 3
+    },
+    {
+      "date": "2024-10-17",
+      "revenue": 926.44,
+      "transactions": 2
+    },
+    {
+      "date": "2024-10-18",
+      "revenue": 4943.2,
+      "transactions": 2
+    },
+    {
+      "date": "2024-10-19",
+      "revenue": 1359.44,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-20",
+      "revenue": 22780.77,
+      "transactions": 5
+    },
+    {
+      "date": "2024-10-21",
+      "revenue": 1979.35,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-22",
+      "revenue": 15123.38,
+      "transactions": 5
+    },
+    {
+      "date": "2024-10-23",
+      "revenue": 757.32,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-26",
+      "revenue": 292.26,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-27",
+      "revenue": 158.42,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-28",
+      "revenue": 2505.55,
+      "transactions": 1
+    },
+    {
+      "date": "2024-10-29",
+      "revenue": 5289.09,
+      "transactions": 2
+    },
+    {
+      "date": "2024-10-31",
+      "revenue": 3387.06,
+      "transactions": 3
+    },
+    {
+      "date": "2024-11-01",
+      "revenue": 5524.65,
+      "transactions": 1
+    },
+    {
+      "date": "2024-11-02",
+      "revenue": 1058.72,
+      "transactions": 2
+    },
+    {
+      "date": "2024-11-03",
+      "revenue": 6472.36,
+      "transactions": 3
+    },
+    {
+      "date": "2024-11-05",
+      "revenue": 5683.5,
+      "transactions": 1
+    },
+    {
+      "date": "2024-11-06",
+      "revenue": 5900.4,
+      "transactions": 1
+    },
+    {
+      "date": "2024-11-07",
+      "revenue": 779.18,
+      "transactions": 2
+    },
+    {
+      "date": "2024-11-08",
+      "revenue": 2163.51,
+      "transactions": 2
+    },
+    {
+      "date": "2024-11-09",
+      "revenue": 2480.1,
+      "transactions": 1
+    },
+    {
+      "date": "2024-11-10",
+      "revenue": 4984.43,
+      "transactions": 3
+    },
+    {
+      "date": "2024-11-13",
+      "revenue": 3750.4,
+      "transactions": 1
+    },
+    {
+      "date": "2024-11-16",
+      "revenue": 6502.59,
+      "transactions": 3
+    },
+    {
+      "date": "2024-11-17",
+      "revenue": 5464.86,
+      "transactions": 2
+    },
+    {
+      "date": "2024-11-19",
+      "revenue": 4005.25,
+      "transactions": 3
+    },
+    {
+      "date": "2024-11-21",
+      "revenue": 4481.62,
+      "transactions": 3
+    },
+    {
+      "date": "2024-11-22",
+      "revenue": 913.68,
+      "transactions": 1
+    },
+    {
+      "date": "2024-11-23",
+      "revenue": 7185.21,
+      "transactions": 4
+    },
+    {
+      "date": "2024-11-25",
+      "revenue": 9674.46,
+      "transactions": 4
+    },
+    {
+      "date": "2024-11-26",
+      "revenue": 312.57,
+      "transactions": 1
+    },
+    {
+      "date": "2024-11-27",
+      "revenue": 2837.87,
+      "transactions": 2
+    },
+    {
+      "date": "2024-11-28",
+      "revenue": 2643.6,
+      "transactions": 1
+    },
+    {
+      "date": "2024-11-29",
+      "revenue": 3770.12,
+      "transactions": 3
+    },
+    {
+      "date": "2024-12-01",
+      "revenue": 1004.08,
+      "transactions": 1
+    },
+    {
+      "date": "2024-12-02",
+      "revenue": 9023.92,
+      "transactions": 2
+    },
+    {
+      "date": "2024-12-04",
+      "revenue": 5973.28,
+      "transactions": 3
+    },
+    {
+      "date": "2024-12-05",
+      "revenue": 3622.16,
+      "transactions": 1
+    },
+    {
+      "date": "2024-12-06",
+      "revenue": 2109.15,
+      "transactions": 1
+    },
+    {
+      "date": "2024-12-08",
+      "revenue": 975.26,
+      "transactions": 2
+    },
+    {
+      "date": "2024-12-10",
+      "revenue": 2533.95,
+      "transactions": 3
+    },
+    {
+      "date": "2024-12-11",
+      "revenue": 2824.67,
+      "transactions": 4
+    },
+    {
+      "date": "2024-12-12",
+      "revenue": 3265.26,
+      "transactions": 1
+    },
+    {
+      "date": "2024-12-13",
+      "revenue": 2558.81,
+      "transactions": 3
+    },
+    {
+      "date": "2024-12-14",
+      "revenue": 7824.19,
+      "transactions": 4
+    },
+    {
+      "date": "2024-12-15",
+      "revenue": 4527.16,
+      "transactions": 2
+    },
+    {
+      "date": "2024-12-16",
+      "revenue": 2444.82,
+      "transactions": 1
+    },
+    {
+      "date": "2024-12-19",
+      "revenue": 5427.81,
+      "transactions": 3
+    },
+    {
+      "date": "2024-12-20",
+      "revenue": 832.32,
+      "transactions": 1
+    },
+    {
+      "date": "2024-12-21",
+      "revenue": 6540.8,
+      "transactions": 2
+    },
+    {
+      "date": "2024-12-22",
+      "revenue": 5126.1,
+      "transactions": 2
+    },
+    {
+      "date": "2024-12-25",
+      "revenue": 3271.41,
+      "transactions": 3
+    },
+    {
+      "date": "2024-12-26",
+      "revenue": 524.8,
+      "transactions": 1
+    },
+    {
+      "date": "2024-12-27",
+      "revenue": 5943.45,
+      "transactions": 3
+    },
+    {
+      "date": "2024-12-28",
+      "revenue": 1815.48,
+      "transactions": 1
+    },
+    {
+      "date": "2024-12-29",
+      "revenue": 3235.46,
+      "transactions": 2
+    },
+    {
+      "date": "2024-12-30",
+      "revenue": 2744.25,
+      "transactions": 1
+    },
+    {
+      "date": "2024-12-31",
+      "revenue": 4716.41,
+      "transactions": 2
+    }
+  ],
+  "sales_by_region": [
+    {
+      "region": "Central",
+      "revenue": 606646.04,
+      "customers": 26,
+      "transactions": 270
+    },
+    {
+      "region": "South",
+      "revenue": 600355.53,
+      "customers": 24,
+      "transactions": 256
+    },
+    {
+      "region": "North",
+      "revenue": 442493.27,
+      "customers": 19,
+      "transactions": 191
+    },
+    {
+      "region": "West",
+      "revenue": 341825.04,
+      "customers": 17,
+      "transactions": 157
+    },
+    {
+      "region": "East",
+      "revenue": 276580.03,
+      "customers": 14,
+      "transactions": 126
+    }
+  ],
+  "top_products": [
+    {
+      "product": "Product 50",
+      "category": "Books",
+      "revenue": 142187.78,
+      "units": 179,
+      "transactions": 30
+    },
+    {
+      "product": "Product 9",
+      "category": "Electronics",
+      "revenue": 102887.69,
+      "units": 184,
+      "transactions": 34
+    },
+    {
+      "product": "Product 29",
+      "category": "Books",
+      "revenue": 98946.87,
+      "units": 136,
+      "transactions": 24
+    },
+    {
+      "product": "Product 26",
+      "category": "Electronics",
+      "revenue": 97050.27,
+      "units": 146,
+      "transactions": 28
+    },
+    {
+      "product": "Product 43",
+      "category": "Toys",
+      "revenue": 92007.61,
+      "units": 115,
+      "transactions": 21
+    },
+    {
+      "product": "Product 12",
+      "category": "Electronics",
+      "revenue": 89952.32,
+      "units": 129,
+      "transactions": 21
+    },
+    {
+      "product": "Product 18",
+      "category": "Clothing",
+      "revenue": 83089.67,
+      "units": 106,
+      "transactions": 21
+    },
+    {
+      "product": "Product 24",
+      "category": "Books",
+      "revenue": 81553.24,
+      "units": 101,
+      "transactions": 17
+    },
+    {
+      "product": "Product 21",
+      "category": "Home & Garden",
+      "revenue": 76620.25,
+      "units": 142,
+      "transactions": 27
+    },
+    {
+      "product": "Product 31",
+      "category": "Clothing",
+      "revenue": 75966.65,
+      "units": 126,
+      "transactions": 22
+    }
+  ],
+  "customers_by_city": [
+    {
+      "city": "Central",
+      "customers": 26
+    },
+    {
+      "city": "South",
+      "customers": 24
+    },
+    {
+      "city": "North",
+      "customers": 19
+    },
+    {
+      "city": "West",
+      "customers": 17
+    },
+    {
+      "city": "East",
+      "customers": 14
+    }
+  ],
+  "returns_data": {
+    "overall_percentage": 26.0,
+    "total_transactions": 1000,
+    "returns_count": 260,
+    "monthly_data": [
+      {
+        "month": "2023-01",
+        "total": 35,
+        "returns": 10,
+        "percentage": 28.57
+      },
+      {
+        "month": "2023-02",
+        "total": 40,
+        "returns": 6,
+        "percentage": 15.0
+      },
+      {
+        "month": "2023-03",
+        "total": 46,
+        "returns": 11,
+        "percentage": 23.91
+      },
+      {
+        "month": "2023-04",
+        "total": 46,
+        "returns": 13,
+        "percentage": 28.26
+      },
+      {
+        "month": "2023-05",
+        "total": 40,
+        "returns": 13,
+        "percentage": 32.5
+      },
+      {
+        "month": "2023-06",
+        "total": 32,
+        "returns": 10,
+        "percentage": 31.25
+      },
+      {
+        "month": "2023-07",
+        "total": 32,
+        "returns": 8,
+        "percentage": 25.0
+      },
+      {
+        "month": "2023-08",
+        "total": 31,
+        "returns": 7,
+        "percentage": 22.58
+      },
+      {
+        "month": "2023-09",
+        "total": 41,
+        "returns": 11,
+        "percentage": 26.83
+      },
+      {
+        "month": "2023-10",
+        "total": 39,
+        "returns": 11,
+        "percentage": 28.21
+      },
+      {
+        "month": "2023-11",
+        "total": 36,
+        "returns": 3,
+        "percentage": 8.33
+      },
+      {
+        "month": "2023-12",
+        "total": 38,
+        "returns": 7,
+        "percentage": 18.42
+      },
+      {
+        "month": "2024-01",
+        "total": 46,
+        "returns": 12,
+        "percentage": 26.09
+      },
+      {
+        "month": "2024-02",
+        "total": 39,
+        "returns": 6,
+        "percentage": 15.38
+      },
+      {
+        "month": "2024-03",
+        "total": 52,
+        "returns": 15,
+        "percentage": 28.85
+      },
+      {
+        "month": "2024-04",
+        "total": 39,
+        "returns": 6,
+        "percentage": 15.38
+      },
+      {
+        "month": "2024-05",
+        "total": 42,
+        "returns": 10,
+        "percentage": 23.81
+      },
+      {
+        "month": "2024-06",
+        "total": 39,
+        "returns": 14,
+        "percentage": 35.9
+      },
+      {
+        "month": "2024-07",
+        "total": 63,
+        "returns": 19,
+        "percentage": 30.16
+      },
+      {
+        "month": "2024-08",
+        "total": 47,
+        "returns": 12,
+        "percentage": 25.53
+      },
+      {
+        "month": "2024-09",
+        "total": 35,
+        "returns": 8,
+        "percentage": 22.86
+      },
+      {
+        "month": "2024-10",
+        "total": 49,
+        "returns": 15,
+        "percentage": 30.61
+      },
+      {
+        "month": "2024-11",
+        "total": 44,
+        "returns": 15,
+        "percentage": 34.09
+      },
+      {
+        "month": "2024-12",
+        "total": 49,
+        "returns": 18,
+        "percentage": 36.73
+      }
+    ]
+  },
+  "summary_stats": {
+    "total_revenue": 2267899.91,
+    "total_transactions": 1000,
+    "total_customers": 100,
+    "total_products": 50,
+    "avg_transaction": 2267.9
+  }
+}
