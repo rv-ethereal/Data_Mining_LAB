@@ -1,215 +1,217 @@
-# 🚀 On-Premise Data Lake with Apache Spark ETL, Apache Airflow Orchestration & Apache Superset Dashboards
 
-<p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" width="120" height="120">
-</p>
+<a name="top"></a>
 
 <div align="center">
 
-**Data Mining Laboratory Project**
+<h1>On-Premise Data Lake Platform</h1>
 
-**Under the guidance of *Prof. Sandeep Kumar Srivastava***
+<h3>Apache Spark ETL · Apache Airflow Orchestration · Apache Superset Analytics</h3>
+
+<p><b>Data Mining Laboratory Project</b><br/>
+Under the guidance of <b>Prof. Sandeep Kumar Srivastava</b></p>
+
+<p>
+  <b>Student:</b> Kuldeep Kumar Mishra &nbsp;|&nbsp;
+  <b>Enrollment No:</b> MSD24006
+</p>
+
+<br/>
+
+<p>
+  <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/Apache%20Spark-ETL-orange?style=for-the-badge&logo=apachespark" />
+  <img src="https://img.shields.io/badge/Apache%20Airflow-Orchestration-017CEE?style=for-the-badge&logo=apacheairflow" />
+  <img src="https://img.shields.io/badge/Apache%20Superset-Analytics-181717?style=for-the-badge&logo=apache" />
+</p>
+
+<p>
+  <img src="https://img.shields.io/github/stars/rv-ethereal/Data_Mining_LAB?style=flat-square" />
+  <img src="https://img.shields.io/github/forks/rv-ethereal/Data_Mining_LAB?style=flat-square" />
+  <img src="https://img.shields.io/github/issues/rv-ethereal/Data_Mining_LAB?style=flat-square" />
+  <img src="https://img.shields.io/github/license/rv-ethereal/Data_Mining_LAB?style=flat-square" />
+</p>
+
+<br/>
+
+<p>
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN0MjFtc2tjNWliOGpwbjlsc250NnJ2dHdlcjNiMXRmcGluOHl2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WTO8QA0mX2Cfw5vhkp/giphy.gif" 
+       alt="Data Engineering" width="650" />
+</p>
 
 </div>
 
 ---
 
-[![Repo Stars](https://img.shields.io/github/stars/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/stargazers)
-[![Repo Forks](https://img.shields.io/github/forks/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/network/members)
-[![Repo Issues](https://img.shields.io/github/issues/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/issues)
-[![Contributors](https://img.shields.io/github/contributors/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/graphs/contributors)
-[![License](https://img.shields.io/github/license/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](LICENSE)
+## 1. Overview
+
+This repository implements an **on-premise data lake platform** that simulates a production-style enterprise data workflow on a single machine (no cloud dependency).
+
+The architecture covers the complete lifecycle:
+
+- Ingestion of structured data into a local **data lake**
+- Distributed ETL using **Apache Spark (PySpark)**
+- Workflow scheduling and dependency management via **Apache Airflow**
+- Storage in a local **analytics warehouse** (Parquet / SQLite / PostgreSQL)
+- Self-service BI dashboards using **Apache Superset**
+
+The project is developed as part of the **Data Mining Laboratory** course and reflects typical responsibilities of a data engineer in an analytics ecosystem.
 
 ---
 
-<p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN0MjFtc2tjNWliOGpwbjlsc250NnJ2dHdlcjNiMXRmcGluOHl2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WTO8QA0mX2Cfw5vhkp/giphy.gif" width="700" alt="data-engineering-gif"/>
-</p>
+## 2. Architecture
 
----
-
-## ✨ Project Summary
-
-This repository contains a **complete on-premise data engineering pipeline** built to simulate a production-like enterprise workflow on a local machine (no cloud required). The stack demonstrates ingestion, ETL, orchestration, warehousing, and BI visualization using open-source tooling.
-
-Key components:
-
-* Local Data Lake (raw / staging / processed)
-* Apache Spark (PySpark) ETL
-* Apache Airflow DAG-based orchestration
-* Local warehouse (Parquet / SQLite / optional PostgreSQL)
-* Apache Superset dashboards for analytics
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
-## 🏗 System Architecture (visual)
-
-```
-                      ┌──────────────────────┐
-                      │     Data Sources      │
-                      │  CSV / JSON / APIs    │
-                      └─────────┬────────────┘
+```text
+                          Data Sources
+                    (CSV / JSON / API Dumps)
+                                   │
+                                   ▼
+                    ┌──────────────────────────┐
+                    │   On-Premise Data Lake   │
+                    │  raw / staging / processed
+                    └──────────────┬───────────┘
+                                   │
+                                   ▼
+                 ┌────────────────────────────────┐
+                 │     Apache Airflow Scheduler   │
+                 │   DAG-driven ETL Orchestration │
+                 └──────────────┬─────────────────┘
                                 │
                                 ▼
-                  ┌─────────────────────────────┐
-                  │     On-Premise Data Lake     │
-                  │  raw / staging / processed   │
-                  └──────────┬───────────────────┘
-                             │
-                             ▼
-          ┌──────────────────────────────────────────┐
-          │         Apache Airflow (Scheduler)        │
-          │  Triggers Spark ETL on schedule           │
-          └──────────┬───────────────────────────────┘
-                     │
-                     ▼
-          ┌──────────────────────────────────────────┐
-          │           Apache Spark ETL Pipeline       │
-          │   Cleaning | Transforming | Aggregations  │
-          └──────────┬───────────────────────────────┘
-                     │
-                     ▼
-   ┌───────────────────────────────────────────────────────────┐
-   │    Local Data Warehouse (Parquet / SQLite / PostgreSQL)   │
-   └──────────┬────────────────────────────────────────────────┘
-              │
-              ▼
-     ┌───────────────────────────────────┐
-     │         Apache Superset           │
-     │     Dashboards & Visual Analytics │
-     └───────────────────────────────────┘
-```
+                 ┌────────────────────────────────┐
+                 │       Apache Spark ETL         │
+                 │  cleaning | joins | aggregations
+                 └──────────────┬─────────────────┘
+                                │
+                                ▼
+        ┌─────────────────────────────────────────────────┐
+        │     Data Warehouse (Parquet / SQLite / PGSQL)   │
+        └──────────────┬──────────────────────────────────┘
+                       │
+                       ▼
+             ┌──────────────────────────────┐
+             │        Apache Superset       │
+             │   Dashboards & Analytics     │
+             └──────────────────────────────┘
+````
 
 ---
 
-## 📂 Data Lake Structure
+## 3. Data Lake Layout
 
-```
+```text
 datalake/
     ├── raw/
     │     ├── sales.csv
     │     ├── products.json
-    │     ├── customers.csv
+    │     └── customers.csv
     ├── staging/
     ├── processed/
     └── warehouse/
 ```
 
----
-
-## 🧰 Built With
-
-**Storage**
-
-* Local File System (Data Lake)
-
-**Processing**
-
-* Apache Spark (PySpark)
-
-**Workflow Orchestration**
-
-* Apache Airflow (DAGs)
-
-**Analytics**
-
-* Apache Superset
-
-**Warehouse**
-
-* Parquet
-* SQLite / (PostgreSQL optional)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+* **raw/**: Direct dumps from source systems
+* **staging/**: Intermediate cleaned/validated data
+* **processed/**: Curated, analytics-ready datasets
+* **warehouse/**: Final fact/dimension-style tables
 
 ---
 
-## 🔧 Workflow (detailed)
+## 4. Technology Stack
 
-### 1️⃣ Data Ingestion — Raw Zone
+<div align="center">
 
-Sources include CSV, JSON and optional API exports. Dropped into `datalake/raw/` for automated pick-up.
+| Layer             | Technology                   |
+| ----------------- | ---------------------------- |
+| Data Lake Storage | Local File System            |
+| Distributed ETL   | Apache Spark (PySpark)       |
+| Orchestration     | Apache Airflow (DAGs)        |
+| Warehouse         | Parquet, SQLite / PostgreSQL |
+| Analytics / BI    | Apache Superset              |
+| Language          | Python                       |
 
-### 2️⃣ Apache Airflow DAG — Pipeline Automation
+</div>
 
-Airflow does the orchestration (ingest → ETL → validate → load → refresh). Example DAG snippet:
+---
+
+## 5. Workflow Summary
+
+### 5.1 Ingestion (Raw Zone)
+
+* Data is exported from operational systems as **CSV / JSON / API dumps**
+* Files are landed into `datalake/raw/` for downstream processing
+
+### 5.2 Orchestration (Apache Airflow)
+
+* Airflow DAG defines the pipeline: **ingest → transform → validate → load**
+* Typical pattern:
 
 ```python
-with DAG('spark_etl_pipeline', schedule_interval='@daily') as dag:
-
+with DAG(
+    dag_id="spark_etl_pipeline",
+    schedule_interval="@daily",
+    catchup=False,
+) as dag:
     ingest = BashOperator(...)
     spark_etl = SparkSubmitOperator(...)
     validate = PythonOperator(...)
     load_warehouse = BashOperator(...)
 ```
 
-### 3️⃣ Apache Spark ETL — Transform Phase
+### 5.3 Transformation (Apache Spark)
 
-Spark performs null/anomaly removal, type conversions, feature engineering, joins, aggregations and writes parquet output to `/processed` and analytics-ready tables to `/warehouse`.
+* Spark handles:
 
-Example:
+  * Null handling, type casting, basic data quality filters
+  * Business logic calculations (e.g., revenue, metrics)
+  * Aggregations and joins across datasets
 
 ```python
 df = spark.read.csv("datalake/raw/sales.csv", header=True, inferSchema=True)
-cleaned = df.dropna().withColumn("total", df.qty * df.price)
+cleaned = (
+    df.dropna()
+      .withColumn("total_amount", df.qty * df.price)
+)
 cleaned.write.mode("overwrite").parquet("datalake/processed/sales")
 ```
 
-### 4️⃣ Data Warehouse — Load Phase
+### 5.4 Warehouse & Analytics
 
-Processed datasets are stored as parquet files or optionally as SQL tables (SQLite/Postgres) for Superset connectivity.
+* Curated outputs are exported as:
 
-### 5️⃣ Apache Superset — Dashboard Layer
+  * **Parquet files** in `datalake/warehouse/`, and/or
+  * Tables in **SQLite / PostgreSQL** for Superset
+* Superset connects to the warehouse to build dashboards such as:
 
-Typical dashboards:
-
-* Revenue by month
-* Sales trend analysis
-* Region-wise sales map
-* Top products by revenue
-* Customer distribution by location
-* Return/Refund analysis
+  * Monthly revenue trend
+  * Top products by revenue
+  * Region-wise performance
+  * Customer segmentation views
 
 ---
 
-## 🎯 Final Deliverables
+## 6. Repository Usage
 
-* ✅ Complete On-Prem Data Lake
-* ✅ Spark ETL PySpark Scripts
-* ✅ Airflow DAG (scheduler + operators)
-* ✅ Structured Warehouse (Parquet / SQL)
-* ✅ Superset Dashboards (6–10 charts)
-* ✅ Architecture Diagram + Documentation
-
----
-
-## 🚀 Quick Start — Add this README to your repository
-
-> **Important:** The steps below will initialize a git repo locally and push **only** to your personal branch. **Do not push to `main`**.
+> The commands below assume you are pushing to your **own branch**, not `main`.
 
 ```bash
-# Initialize a new Git repository (if not initialized)
+# Initialize git (if not already)
 git init
 
-# Add all project files
+# Stage project files
 git add .
 
-# Add remote GitHub repository (one-time)
+# Configure remote
 git remote add origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
-# Commit your changes
-git commit -m "msa24021 repo push"
+# Commit with your identifier
+git commit -m "msa24006 project submission"
 
-# Create and switch to your own branch (replace with your enrollment number)
-git checkout -b msa24021
-
-# Push ONLY to your own branch — NOT to main
-git push origin msa24021
+# Create and push to your personal branch
+git checkout -b msa24006
+git push origin msa24006
 ```
 
-> If `origin` already exists and you need to update it, run:
+If the remote already exists:
 
 ```bash
 git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
@@ -217,30 +219,15 @@ git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
 ---
 
+## 7. Maintainer & Contact
 
-
-## 👥 Contributors
-
-<p align="center">
-  <img src="https://contrib.rocks/image?repo=rv-ethereal/Data_Mining_LAB" alt="Contributors"/>
-</p>
-
-[![Contributors](https://img.shields.io/github/contributors/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/graphs/contributors)
-
-
+* **Student:** Kuldeep Kumar Mishra
+* **Enrollment No:** MSD24006
+* **Course:** Data Mining Laboratory
+* **Instructor:** Prof. Sandeep Kumar Srivastava
+* **Repository:** [https://github.com/rv-ethereal/Data_Mining_LAB](https://github.com/rv-ethereal/Data_Mining_LAB)
 
 ---
 
-## 📞 Contact
+<p align="right"><a href="#top">Back to top</a></p>
 
-**Student:** *Add your name here*
-
-**Enrollment no:** *Add your name here*
-
-**Instructor:** Prof. Sandeep Kumar Srivastava
-
-**Repository:** [https://github.com/rv-ethereal/Data_Mining_LAB](https://github.com/rv-ethereal/Data_Mining_LAB)
-
----
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
