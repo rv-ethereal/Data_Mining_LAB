@@ -273,50 +273,13 @@ Typical dashboards:
 
 ---
 
-## 6. Repository Usage
 
-> The commands below assume you are pushing to your **own branch**, not `main`.
-
-```bash
-# Initialize git (if not already)
-git init
-
-# Stage project files
-git add .
-
-# Configure remote
-git remote add origin https://github.com/rv-ethereal/Data_Mining_LAB.git
-
-# Commit with your identifier
-git commit -m "msa24006 project submission"
-# Commit your changes
-git commit -m "msa24022 repo push"
-
-# Create and push to your personal branch
-git checkout -b msa24006
-git push origin msa24006
-# Create and switch to your own branch (replace with your enrollment number)
-git checkout -b msa24022
-
-# Push ONLY to your own branch — NOT to main
-git push origin msa24021
-```
-
-If the remote already exists:
-
-```bash
-git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
-```
-
----
 
 ## 📞 Contact
 
 **Student:** *Soumita Chatterjee*
-**Student:** _Kshitij_
 
 **Enrollment no:** *MSA24006*
-**Enrollment no:** _MSD24012_
 
 **Instructor:** Prof. Sandeep Kumar Srivastava
 
