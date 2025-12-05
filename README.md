@@ -219,13 +219,15 @@ git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
 ---
 
-## 7. Maintainer & Contact
+## 📞 Contact
 
-* **Student:** Kuldeep Kumar Mishra
-* **Enrollment No:** MSD24006
-* **Course:** Data Mining Laboratory
-* **Instructor:** Prof. Sandeep Kumar Srivastava
-* **Repository:** [https://github.com/rv-ethereal/Data_Mining_LAB](https://github.com/rv-ethereal/Data_Mining_LAB)
+**Student:** *Soumita Chatterjee*
+
+**Enrollment no:** *MSA24006*
+
+**Instructor:** Prof. Sandeep Kumar Srivastava
+
+**Repository:** [https://github.com/rv-ethereal/Data_Mining_LAB](https://github.com/rv-ethereal/Data_Mining_LAB)
 
 ---
 
