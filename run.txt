@@ -1,0 +1,25 @@
+$env:SUPERSET_SECRET_KEY = 'thisismysecretkey123456789'
+$env:FLASK_APP = 'superset'
+
+D:/PROJECTS/onprem-datalake/venv/Scripts/superset.exe fab create-admin `
+--username admin `
+--firstname Admin `
+--lastname User `
+--email admin@superset.com `
+--password admin
+
+
+
+$env:SUPERSET_SECRET_KEY = 'thisismysecretkey123456789'
+$env:FLASK_APP = 'superset'
+
+Write-Host "Starting Superset at http://localhost:8088" -ForegroundColor Green
+Write-Host "Username: admin | Password: admin" -ForegroundColor Yellow
+
+D:/PROJECTS/onprem-datalake/venv/Scripts/superset.exe run -p 8088 --with-threads --reload --debugger
+
+
+
+SQLALCHEMY_DATABASE_URI = "sqlite:///D:/PROJECTS/onprem-datalake/datalake/warehouse.db"
+
+sqlite:///D:/PROJECTS/onprem-datalake/datalake/warehouse.db
