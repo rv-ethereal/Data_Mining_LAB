@@ -1,246 +1,323 @@
-# 🚀 On-Premise Data Lake with Apache Spark ETL, Apache Airflow Orchestration & Apache Superset Dashboards
+# 🚀 Data Lakehouse with Medallion Architecture
 
-<p align="center">
-  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Logo" width="120" height="120">
-</p>
 
-<div align="center">
+A production-ready end-to-end data lakehouse implementation using modern data stack technologies. This project demonstrates a medallion architecture (Bronze → Silver → Gold) with automated ETL pipelines, distributed query engine, and interactive dashboards.
 
-**Data Mining Laboratory Project**
-
-**Under the guidance of *Prof. Sandeep Kumar Srivastava***
-
-</div>
-
----
-
-[![Repo Stars](https://img.shields.io/github/stars/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/stargazers)
-[![Repo Forks](https://img.shields.io/github/forks/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/network/members)
-[![Repo Issues](https://img.shields.io/github/issues/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/issues)
-[![Contributors](https://img.shields.io/github/contributors/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/graphs/contributors)
-[![License](https://img.shields.io/github/license/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](LICENSE)
-
----
-
-<p align="center">
-  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN0MjFtc2tjNWliOGpwbjlsc250NnJ2dHdlcjNiMXRmcGluOHl2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WTO8QA0mX2Cfw5vhkp/giphy.gif" width="700" alt="data-engineering-gif"/>
-</p>
-
----
-
-## ✨ Project Summary
-
-This repository contains a **complete on-premise data engineering pipeline** built to simulate a production-like enterprise workflow on a local machine (no cloud required). The stack demonstrates ingestion, ETL, orchestration, warehousing, and BI visualization using open-source tooling.
-
-Key components:
-
-* Local Data Lake (raw / staging / processed)
-* Apache Spark (PySpark) ETL
-* Apache Airflow DAG-based orchestration
-* Local warehouse (Parquet / SQLite / optional PostgreSQL)
-* Apache Superset dashboards for analytics
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
-## 🏗 System Architecture (visual)
+## 🏗️ Architecture
 
 ```
-                      ┌──────────────────────┐
-                      │     Data Sources      │
-                      │  CSV / JSON / APIs    │
-                      └─────────┬────────────┘
-                                │
-                                ▼
-                  ┌─────────────────────────────┐
-                  │     On-Premise Data Lake     │
-                  │  raw / staging / processed   │
-                  └──────────┬───────────────────┘
-                             │
-                             ▼
-          ┌──────────────────────────────────────────┐
-          │         Apache Airflow (Scheduler)        │
-          │  Triggers Spark ETL on schedule           │
-          └──────────┬───────────────────────────────┘
-                     │
-                     ▼
-          ┌──────────────────────────────────────────┐
-          │           Apache Spark ETL Pipeline       │
-          │   Cleaning | Transforming | Aggregations  │
-          └──────────┬───────────────────────────────┘
-                     │
-                     ▼
-   ┌───────────────────────────────────────────────────────────┐
-   │    Local Data Warehouse (Parquet / SQLite / PostgreSQL)   │
-   └──────────┬────────────────────────────────────────────────┘
-              │
-              ▼
-     ┌───────────────────────────────────┐
-     │         Apache Superset           │
-     │     Dashboards & Visual Analytics │
-     └───────────────────────────────────┘
+┌─────────────┐     ┌──────────┐     ┌────────┐     ┌───────┐     ┌──────────┐
+│   MinIO     │────▶│  Spark   │────▶│ Delta  │────▶│ Trino │────▶│ Superset │
+│  (Storage)  │     │  (ETL)   │     │  Lake  │     │(Query)│     │  (Viz)   │
+└─────────────┘     └──────────┘     └────────┘     └───────┘     └──────────┘
+       ▲                   ▲
+       │                   │
+       └───────────────────┴─── Orchestrated by Apache Airflow
 ```
 
----
+## 🚀 Quick Start
 
-## 📂 Data Lake Structure
+### ⚡ One-Click Execution (Windows)
 
-```
-datalake/
-    ├── raw/
-    │     ├── sales.csv
-    │     ├── products.json
-    │     ├── customers.csv
-    ├── staging/
-    ├── processed/
-    └── warehouse/
+We have provided a PowerShell script to automate the entire process:
+
+```powershell
+./execute_pipeline.ps1
 ```
 
----
+This script will:
+1. Start all Docker services
+2. Wait for Airflow to be ready
+3. Generate sample data
+4. Upload data to MinIO
+5. Trigger the Airflow pipeline
+6. Monitor the execution status
 
-## 🧰 Built With
+### 🐳 Manual Setup
 
-**Storage**
-
-* Local File System (Data Lake)
-
-**Processing**
-
-* Apache Spark (PySpark)
-
-**Workflow Orchestration**
-
-* Apache Airflow (DAGs)
-
-**Analytics**
-
-* Apache Superset
-
-**Warehouse**
-
-* Parquet
-* SQLite / (PostgreSQL optional)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
-## 🔧 Workflow (detailed)
-
-### 1️⃣ Data Ingestion — Raw Zone
-
-Sources include CSV, JSON and optional API exports. Dropped into `datalake/raw/` for automated pick-up.
-
-### 2️⃣ Apache Airflow DAG — Pipeline Automation
-
-Airflow does the orchestration (ingest → ETL → validate → load → refresh). Example DAG snippet:
-
-```python
-with DAG('spark_etl_pipeline', schedule_interval='@daily') as dag:
-
-    ingest = BashOperator(...)
-    spark_etl = SparkSubmitOperator(...)
-    validate = PythonOperator(...)
-    load_warehouse = BashOperator(...)
-```
-
-### 3️⃣ Apache Spark ETL — Transform Phase
-
-Spark performs null/anomaly removal, type conversions, feature engineering, joins, aggregations and writes parquet output to `/processed` and analytics-ready tables to `/warehouse`.
-
-Example:
-
-```python
-df = spark.read.csv("datalake/raw/sales.csv", header=True, inferSchema=True)
-cleaned = df.dropna().withColumn("total", df.qty * df.price)
-cleaned.write.mode("overwrite").parquet("datalake/processed/sales")
-```
-
-### 4️⃣ Data Warehouse — Load Phase
-
-Processed datasets are stored as parquet files or optionally as SQL tables (SQLite/Postgres) for Superset connectivity.
-
-### 5️⃣ Apache Superset — Dashboard Layer
-
-Typical dashboards:
-
-* Revenue by month
-* Sales trend analysis
-* Region-wise sales map
-* Top products by revenue
-* Customer distribution by location
-* Return/Refund analysis
-
----
-
-## 🎯 Final Deliverables
-
-* ✅ Complete On-Prem Data Lake
-* ✅ Spark ETL PySpark Scripts
-* ✅ Airflow DAG (scheduler + operators)
-* ✅ Structured Warehouse (Parquet / SQL)
-* ✅ Superset Dashboards (6–10 charts)
-* ✅ Architecture Diagram + Documentation
-
----
-
-## 🚀 Quick Start — Add this README to your repository
-
-> **Important:** The steps below will initialize a git repo locally and push **only** to your personal branch. **Do not push to `main`**.
+### Step 1: Clone and Setup
 
 ```bash
-# Initialize a new Git repository (if not initialized)
-git init
+git clone <repository-url>
+cd MSD24001-L1
 
-# Add all project files
-git add .
+# Copy environment template
+cp .env.example .env
 
-# Add remote GitHub repository (one-time)
-git remote add origin https://github.com/rv-ethereal/Data_Mining_LAB.git
-
-# Commit your changes
-git commit -m "msa24021 repo push"
-
-# Create and switch to your own branch (replace with your enrollment number)
-git checkout -b msa24021
-
-# Push ONLY to your own branch — NOT to main
-git push origin msa24021
+# Optional: Customize credentials in .env
+# nano .env
 ```
 
-> If `origin` already exists and you need to update it, run:
+### Step 2: Start Services
 
 ```bash
-git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
+# Start all containers
+docker-compose up -d
+
+# Wait for services to initialize (~2-3 minutes)
+docker-compose ps
 ```
 
+### Step 3: Access Web Interfaces
+
+| Service   | URL                      | Username | Password |
+|-----------|--------------------------|----------|----------|
+| Airflow   | http://localhost:8080    | admin    | admin    |
+| Superset  | http://localhost:8088    | admin    | admin    |
+| MinIO     | http://localhost:9001    | admin    | minio123 |
+| Trino     | http://localhost:8081    | -        | -        |
+
+### Step 4: Run Sample Pipeline
+
+1. **Generate Sample Data**
+   ```bash
+   # Generate sample sales data
+   python data/sample/generator.py
+   ```
+
+2. **Upload to MinIO**
+   ```bash
+   # Install dependencies
+   pip install minio pandas
+
+   # Upload to bronze bucket
+   python scripts/upload_to_minio.py
+   ```
+
+3. **Trigger Airflow DAG**
+   - Go to http://localhost:8080
+   - Enable the `lakehouse_etl` DAG
+   - Click "Trigger DAG" button
+   - Monitor task execution in the Graph view
+
+4. **View Data in Trino**
+   ```bash
+   docker exec -it trino trino
+   
+   # In Trino CLI:
+   SHOW SCHEMAS FROM delta;
+   USE delta.gold;
+   SHOW TABLES;
+   SELECT * FROM daily_sales LIMIT 10;
+   ```
+
+5. **Create Superset Dashboard**
+   - Go to http://localhost:8088
+   - Settings → Database Connections → + Database
+   - URI: `trino://admin@trino:8080/delta`
+   - Test connection → Connect
+   - Create datasets from `gold` schema tables
+   - Build visualizations and dashboards
+
+## 📚 Tech Stack
+
+| Component       | Technology              | Purpose                          |
+|-----------------|-------------------------|----------------------------------|
+| Storage         | MinIO                   | S3-compatible object storage     |
+| Metadata Format | Delta Lake 2.4.0        | ACID transactions, time travel   |
+| Processing      | Apache Spark 3.4.1      | Distributed data transformations |
+| Orchestration   | Apache Airflow 2.8.0    | Workflow scheduling & monitoring |
+| Query Engine    | Trino (latest)          | Fast distributed SQL queries     |
+| Visualization   | Apache Superset (latest)| Interactive dashboards           |
+| Metadata DB     | PostgreSQL 15           | Airflow & Superset metadata      |
+
+## 📂 Project Structure
+
+```
+.
+├── airflow/
+│   └── dags/
+│       └── lakehouse_dag.py          # Main ETL pipeline DAG
+├── spark/
+│   ├── jobs/
+│   │   ├── bronze_ingestion.py       # Raw data ingestion
+│   │   ├── silver_transformation.py  # Data quality & cleaning
+│   │   └── gold_aggregation.py       # Business metrics
+│   ├── Dockerfile                    # Custom Spark image
+│   └── jars/                         # Delta Lake dependencies
+├── trino/
+│   └── catalog/
+│       └── delta.properties          # Delta Lake connector config
+├── superset/
+│   └── Dockerfile                    # Custom Superset with Trino driver
+├── data/
+│   └── sample/
+│       └── generator.py              # Sample data generator
+├── scripts/
+│   └── upload_to_minio.py            # Data upload utility
+├── docker-compose.yml                # Container orchestration
+├── .env.example                      # Environment template
+└── README.md                         # This file
+```
+
+## 🔧 Configuration
+
+### Environment Variables
+
+Edit `.env` file to customize:
+
+```ini
+# MinIO credentials
+MINIO_ROOT_USER=admin
+MINIO_ROOT_PASSWORD=minio123
+
+# Airflow admin
+AIRFLOW_ADMIN_USERNAME=admin
+AIRFLOW_ADMIN_PASSWORD=admin
+
+# Superset admin
+SUPERSET_ADMIN_USERNAME=admin
+SUPERSET_ADMIN_PASSWORD=admin
+SUPERSET_SECRET_KEY=change_this_in_production
+```
+
+### Spark Configuration
+
+Modify `spark/jobs/*.py` for custom transformations. Delta Lake packages are automatically downloaded via Maven:
+
+```python
+--packages io.delta:delta-core_2.12:2.4.0,org.apache.hadoop:hadoop-aws:3.3.4
+```
+
+### Trino Catalog
+
+The Delta Lake catalog is configured in `trino/catalog/delta.properties`:
+
+```properties
+connector.name=delta_lake
+hive.metastore=file
+hive.metastore.catalog.dir=s3://gold/metastore
+s3.endpoint=http://minio:9000
+s3.path-style-access=true
+```
+
+## 🛠️ Troubleshooting
+
+### Services Won't Start
+
+```bash
+# Check logs
+docker-compose logs -f [service-name]
+
+# Restart specific service
+docker-compose restart [service-name]
+
+# Reset everything
+docker-compose down -v
+docker-compose up -d
+```
+
+### Airflow Tasks Failing
+
+1. **Check task logs**: Airflow UI → DAGs → lakehouse_etl → Graph → Click task → Logs
+2. **Common issues**:
+   - Missing packages: Verify Spark `--packages` in DAG
+   - Docker socket access: Ensure `/var/run/docker.sock` is mounted
+   - Network issues: All containers must be on `lakehouse-network`
+
+### Trino Connection Errors
+
+```bash
+# Test Trino connectivity from Superset
+docker exec superset curl http://trino:8080/v1/info
+
+# Check catalog loading
+docker logs trino | grep delta
+```
+
+### MinIO Access Issues
+
+```bash
+# Verify buckets exist
+docker exec lakehouse-minio mc ls minio/
+
+# Create missing buckets
+docker exec lakehouse-minio mc mb minio/bronze
+docker exec lakehouse-minio mc mb minio/silver
+docker exec lakehouse-minio mc mb minio/gold
+```
+
+## 🧪 Development
+
+### Adding New Transformations
+
+1. Create Spark job in `spark/jobs/`
+2. Add task to `airflow/dags/lakehouse_dag.py`
+3. Set task dependencies: `bronze >> silver >> gold >> new_task`
+4. Test locally: `docker exec spark /opt/spark/bin/spark-submit ...`
+
+### Custom Superset Charts
+
+1. Install additional viz plugins in `superset/Dockerfile`
+2. Rebuild: `docker-compose up -d --build superset`
+
+## 📊 Sample Queries
+
+### Daily Sales Analysis
+
+```sql
+SELECT 
+    date,
+    SUM(revenue) as total_revenue,
+    COUNT(DISTINCT customer_id) as unique_customers,
+    AVG(order_value) as avg_order_value
+FROM delta.gold.daily_sales
+WHERE date >= CURRENT_DATE - INTERVAL '30' DAY
+GROUP BY date
+ORDER BY date DESC;
+```
+
+### Product Performance
+
+```sql
+SELECT 
+    product_category,
+    SUM(quantity_sold) as units_sold,
+    SUM(revenue) as total_revenue,
+    AVG(profit_margin) as avg_margin
+FROM delta.gold.product_performance
+GROUP BY product_category
+ORDER BY total_revenue DESC
+LIMIT 10;
+```
+
+## 🚦 Health Checks
+
+Monitor service health:
+
+```bash
+# Airflow
+curl http://localhost:8080/health
+
+# Superset  
+curl http://localhost:8088/health
+
+# Trino
+curl http://localhost:8081/v1/info
+
+# MinIO
+curl http://localhost:9000/minio/health/live
+```
+
+## 📝 License
+
+This project is for educational purposes as part of the MSD24001-L1 Data Mining course.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit changes (`git commit -m 'Add amazing feature'`)
+4. Push to branch (`git push origin feature/amazing-feature`)
+5. Open Pull Request
+
+## 📧 Support
+
+For issues or questions:
+- Check [Troubleshooting](#-troubleshooting) section
+- Review container logs: `docker-compose logs -f`
+- Open an issue on the repository
+
 ---
 
-
-
-## 👥 Contributors
-
-<p align="center">
-  <img src="https://contrib.rocks/image?repo=rv-ethereal/Data_Mining_LAB" alt="Contributors"/>
-</p>
-
-[![Contributors](https://img.shields.io/github/contributors/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/graphs/contributors)
-
-
-
----
-
-## 📞 Contact
-
-**Student:** *Add your name here*
-
-**Enrollment no:** *Add your name here*
-
-**Instructor:** Prof. Sandeep Kumar Srivastava
-
-**Repository:** [https://github.com/rv-ethereal/Data_Mining_LAB](https://github.com/rv-ethereal/Data_Mining_LAB)
-
----
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+**Note**: This is a development setup. For production deployment, implement proper security (secrets management, network isolation, authentication), scalability (cluster mode for Spark/Trino), and monitoring (Prometheus + Grafana).
