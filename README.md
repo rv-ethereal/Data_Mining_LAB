@@ -76,11 +76,15 @@ Key components:
    └──────────┬────────────────────────────────────────────────┘
               │
               ▼
-     ┌───────────────────────────────────┐
+     ┌───────────────────────────────────────┐
      │         Apache Superset           │
      │     Dashboards & Visual Analytics │
      └───────────────────────────────────┘
 ```
+
+### ETL Pipeline Implementation
+
+![Apache Spark ETL Pipeline](elt.png)
 
 ---
 
@@ -97,7 +101,12 @@ datalake/
     └── warehouse/
 ```
 
+### Data Warehouse Structure
+
+![Data Warehouse Implementation](warehouse.png)
+
 ---
+
 
 ## 🧰 Built With
 
@@ -171,6 +180,8 @@ Typical dashboards:
 * Top products by revenue
 * Customer distribution by location
 * Return/Refund analysis
+
+![Apache Superset Dashboard](dashboard.png)
 
 ---
 
