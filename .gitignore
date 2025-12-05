@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+venv/
+*.egg-info/
+
+# Data files
+data/sample/*.csv
+*.parquet
+
+# Logs
+airflow/logs/
+*.log
+
+# Docker
+.env
+
+# Spark
+.spark-cache/
+metastore_db/
+derby.log
+
+# IDE
+.vscode/
+*.idea/
+
+# Large file
+spark/jars/aws-java-sdk-bundle-1.12.262.jar
