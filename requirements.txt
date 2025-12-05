@@ -1,0 +1,9 @@
+pyspark
+apache-airflow
+apache-superset
+pandas
+numpy
+matplotlib
+seaborn
+jupyter
+sqlalchemy

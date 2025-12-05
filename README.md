@@ -37,6 +37,9 @@ Under the guidance of <b>Prof. Sandeep Kumar Srivastava</b></p>
   <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN0MjFtc2tjNWliOGpwbjlsc250NnJ2dHdlcjNiMXRmcGluOHl2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WTO8QA0mX2Cfw5vhkp/giphy.gif" 
        alt="Data Engineering" width="650" />
 </p>
+**Data Mining Laboratory Project**
+
+**Under the guidance of _Prof. Sandeep Kumar Srivastava_**
 
 </div>
 
@@ -55,6 +58,33 @@ The architecture covers the complete lifecycle:
 - Self-service BI dashboards using **Apache Superset**
 
 The project is developed as part of the **Data Mining Laboratory** course and reflects typical responsibilities of a data engineer in an analytics ecosystem.
+[![Repo Stars](https://img.shields.io/github/stars/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/stargazers)
+[![Repo Forks](https://img.shields.io/github/forks/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/network/members)
+[![Repo Issues](https://img.shields.io/github/issues/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/issues)
+[![Contributors](https://img.shields.io/github/contributors/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](https://github.com/rv-ethereal/Data_Mining_LAB/graphs/contributors)
+[![License](https://img.shields.io/github/license/rv-ethereal/Data_Mining_LAB?style=for-the-badge)](LICENSE)
+
+---
+
+<p align="center">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN0MjFtc2tjNWliOGpwbjlsc250NnJ2dHdlcjNiMXRmcGluOHl2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WTO8QA0mX2Cfw5vhkp/giphy.gif" width="700" alt="data-engineering-gif"/>
+</p>
+
+---
+
+## ✨ Project Summary
+
+This repository contains a **complete on-premise data engineering pipeline** built to simulate a production-like enterprise workflow on a local machine (no cloud required). The stack demonstrates ingestion, ETL, orchestration, warehousing, and BI visualization using open-source tooling.
+
+Key components:
+
+- Local Data Lake (raw / staging / processed)
+- Apache Spark (PySpark) ETL
+- Apache Airflow DAG-based orchestration
+- Local warehouse (Parquet / SQLite / optional PostgreSQL)
+- Apache Superset dashboards for analytics
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
@@ -114,6 +144,11 @@ datalake/
 * **processed/**: Curated, analytics-ready datasets
 * **warehouse/**: Final fact/dimension-style tables
 
+* **raw/**: Direct dumps from source systems
+* **staging/**: Intermediate cleaned/validated data
+* **processed/**: Curated, analytics-ready datasets
+* **warehouse/**: Final fact/dimension-style tables
+
 ---
 
 ## 4. Technology Stack
@@ -130,6 +165,30 @@ datalake/
 | Language          | Python                       |
 
 </div>
+## 🧰 Built With
+
+**Storage**
+
+- Local File System (Data Lake)
+
+**Processing**
+
+- Apache Spark (PySpark)
+
+**Workflow Orchestration**
+
+- Apache Airflow (DAGs)
+
+**Analytics**
+
+- Apache Superset
+
+**Warehouse**
+
+- Parquet
+- SQLite / (PostgreSQL optional)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---
 
@@ -186,6 +245,31 @@ cleaned.write.mode("overwrite").parquet("datalake/processed/sales")
   * Top products by revenue
   * Region-wise performance
   * Customer segmentation views
+### 4️⃣ Data Warehouse — Load Phase
+
+Processed datasets are stored as parquet files or optionally as SQL tables (SQLite/Postgres) for Superset connectivity.
+
+### 5️⃣ Apache Superset — Dashboard Layer
+
+Typical dashboards:
+
+- Revenue by month
+- Sales trend analysis
+- Region-wise sales map
+- Top products by revenue
+- Customer distribution by location
+- Return/Refund analysis
+
+---
+
+## 🎯 Final Deliverables
+
+- ✅ Complete On-Prem Data Lake
+- ✅ Spark ETL PySpark Scripts
+- ✅ Airflow DAG (scheduler + operators)
+- ✅ Structured Warehouse (Parquet / SQL)
+- ✅ Superset Dashboards (6–10 charts)
+- ✅ Architecture Diagram + Documentation
 
 ---
 
@@ -205,10 +289,17 @@ git remote add origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
 # Commit with your identifier
 git commit -m "msa24006 project submission"
+# Commit your changes
+git commit -m "msa24022 repo push"
 
 # Create and push to your personal branch
 git checkout -b msa24006
 git push origin msa24006
+# Create and switch to your own branch (replace with your enrollment number)
+git checkout -b msa24022
+
+# Push ONLY to your own branch — NOT to main
+git push origin msa24021
 ```
 
 If the remote already exists:
@@ -222,8 +313,10 @@ git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 ## 📞 Contact
 
 **Student:** *Soumita Chatterjee*
+**Student:** _Kshitij_
 
 **Enrollment no:** *MSA24006*
+**Enrollment no:** _MSD24012_
 
 **Instructor:** Prof. Sandeep Kumar Srivastava
 
