@@ -1,6 +1,8 @@
 # Data Lakehouse Project
 
 End-to-end data lakehouse using Apache Spark, Airflow, MinIO, Trino, and Superset.
+Virat Sharma
+MSD24008
 
 ## Quick Start
 
