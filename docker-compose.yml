@@ -105,7 +105,7 @@ services:
 
   # Airflow Init - Initialize database and create admin user
   airflow-init:
-    build: ./airflow
+    image: apache/airflow:2.8.1-python3.11
     container_name: lakehouse-airflow-init
     depends_on:
       - postgres
@@ -139,12 +139,11 @@ services:
 
   # Airflow Webserver
   airflow-webserver:
-    build: ./airflow
+    image: apache/airflow:2.8.1-python3.11
     container_name: lakehouse-airflow-webserver
     depends_on:
       - postgres
-      airflow-init:
-        condition: service_completed_successfully
+      - airflow-init
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres/${POSTGRES_DB}
@@ -168,12 +167,11 @@ services:
 
   # Airflow Scheduler
   airflow-scheduler:
-    build: ./airflow
+    image: apache/airflow:2.8.1-python3.11
     container_name: lakehouse-airflow-scheduler
     depends_on:
       - postgres
-      airflow-init:
-        condition: service_completed_successfully
+      - airflow-init
     environment:
       - AIRFLOW__CORE__EXECUTOR=LocalExecutor
       - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres/${POSTGRES_DB}

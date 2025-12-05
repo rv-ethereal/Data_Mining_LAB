@@ -1,28 +1,30 @@
-# Environment variables
-.env
-
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
 *.so
 .Python
+venv/
+*.egg-info/
 
-# Airflow
+# Data files
+data/sample/*.csv
+*.parquet
+
+# Logs
 airflow/logs/
-airflow/**/latest
+*.log
+
+# Docker
+.env
+
+# Spark
+.spark-cache/
+metastore_db/
+derby.log
 
 # IDE
 .vscode/
-.idea/
-*.swp
-*.swo
+*.idea/
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Data (if large)
-# Uncomment if needed
-# data/raw/
-# data/processed/
+# Large file
+spark/jars/aws-java-sdk-bundle-1.12.262.jar
