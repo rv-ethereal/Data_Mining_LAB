@@ -7,13 +7,7 @@
 
 <h3>Apache Spark ETL · Apache Airflow Orchestration · Apache Superset Analytics</h3>
 
-<p><b>Data Mining Laboratory Project</b><br/>
-Under the guidance of <b>Prof. Sandeep Kumar Srivastava</b></p>
 
-<p>
-  <b>Student:</b> Kuldeep Kumar Mishra &nbsp;|&nbsp;
-  <b>Enrollment No:</b> MSD24006
-</p>
 
 <br/>
 
