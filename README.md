@@ -1,15 +1,28 @@
-# On-Premises Data Lake
 
-A data lake solution with Apache Spark ETL, Apache Airflow orchestration, and Apache Superset analytics dashboard.
+---
 
-## Overview
+# On-Premises Data Lake using Apache Spark, Airflow & Superset
 
-Processes sales and customer data through three layers:
-- **Raw**: Source CSV files
-- **Processed**: Cleaned data (Parquet format)
-- **Warehouse**: Aggregated analytics tables
+A complete **on-premises data lake and analytics pipeline** built using **Apache Spark for ETL processing**, **Apache Airflow for workflow orchestration**, and **Apache Superset for business intelligence and visualization**.
+This project demonstrates the full **Raw → Processed → Warehouse → Analytics** lifecycle for structured enterprise data.
 
-## Architecture
+---
+
+## 🎯 Project Objective
+
+To design and implement a **local data lake architecture** that:
+
+* Ingests raw transactional data
+* Performs scalable ETL using Apache Spark
+* Automates workflows using Apache Airflow
+* Builds analytical warehouse tables
+* Visualizes business insights using Apache Superset
+
+This project is developed as part of the **Data Mining and Warehousing Laboratory**.
+
+---
+
+## 🏗️ System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -45,213 +58,200 @@ Processes sales and customer data through three layers:
 └─────────────────────────────────────────────────────────┘
 ```
 
-## Tech Stack
+---
 
-- Apache Spark 3.5.0+ (ETL processing)
-- Apache Airflow 2.6.3 (Orchestration)
-- Apache Superset (Visualization)
-- Python 3.11+, Pandas, PyArrow, SQLAlchemy
+## 🛠️ Technology Stack
 
-## Quick Start
+* **Apache Spark 3.5+** – Distributed ETL processing
+* **Apache Airflow 2.6.3** – Workflow orchestration
+* **Apache Superset** – Business Intelligence dashboard
+* **Python 3.11+** – Core programming language
+* **Pandas & PyArrow** – Data handling
+* **SQLite** – Analytical warehouse database
 
-1. **Install Dependencies**
-```powershell
-pip install -r requirements.txt
-```
+---
 
-2. **Initialize Airflow**
-```powershell
-.\init_superset.ps1
-```
-
-3. **Prepare Data** - Place files in `datalake/raw/`:
-   - `customers.csv`
-   - `sales.csv`
-
-4. **Start Services**
-```powershell
-airflow standalone  # http://localhost:8080
-.\run_superset.ps1  # http://localhost:8088
-```
-
-## Project Structure
+## 📁 Project Structure
 
 ```
 onprem-datalake/
-├── airflow/dags/spark_etl_dag.py       # Daily ETL workflow
-├── spark/spark_etl.py                  # ETL logic
+├── airflow/dags/
+│   └── spark_etl_dag.py        # Daily Airflow ETL pipeline
+├── spark/
+│   └── spark_etl.py            # Spark ETL with Pandas fallback
+├── tools/
+│   └── parquet_to_sqlite.py    # Warehouse Parquet → SQLite converter
 ├── datalake/
-│   ├── raw/                  # Source CSV
-│   ├── processed/            # Cleaned (Parquet)
-│   └── warehouse/            # Analytics tables
-├── app.py                    # Superset app
-├── superset_config.py        # Config
-└── requirements.txt
+│   ├── raw/                    # Input CSV files
+│   ├── processed/              # Cleaned Parquet data
+│   └── warehouse/              # Aggregated analytics tables
+├── app.py                      # Superset application entry
+├── superset_config.py          # Superset configuration
+├── init_superset.ps1           # Superset initialization script
+├── run_superset.ps1            # Script to start Superset
+├── requirements.txt
+└── README.md
 ```
 
-## ETL Pipeline
+---
 
-**DAG**: `data_lake_etl_pipeline` (daily)
+## 🔄 ETL Pipeline Description
 
-**Tasks:**
-1. `check_input_files` - Verify data exists
-2. `run_spark_etl` - Transform & clean
-3. `validate_warehouse_output` - Confirm tables created
+**Airflow DAG:** `data_lake_etl_pipeline`
+**Schedule:** Daily
 
-## Analytics Tables
+### Pipeline Tasks:
 
-| Table | Purpose |
-|-------|---------|
-| revenue_by_product | Sales metrics per product |
-| revenue_by_region | Regional performance |
-| payment_analysis | Payment method breakdown |
-| status_summary | Order status distribution |
-| customer_summary | Customer purchase history |
-| monthly_sales | Time-series trend |
+1. **Check Input Files** – Verifies presence of raw CSV files
+2. **Run Spark ETL** – Data cleaning, transformation, and aggregation
+3. **Validate Warehouse Output** – Confirms all analytics tables are created
+4. **Success Notification**
 
-## Execution Commands
+The Spark ETL also includes a **Pandas fallback mode** to ensure execution even if Spark fails.
 
-### Setup & Installation
+---
+
+## 📊 Warehouse Analytics Tables
+
+| Table Name           | Description                    |
+| -------------------- | ------------------------------ |
+| `revenue_by_product` | Product-wise sales and revenue |
+| `revenue_by_region`  | Regional business performance  |
+| `payment_analysis`   | Payment method statistics      |
+| `status_summary`     | Order status distribution      |
+| `customer_summary`   | Customer purchase behavior     |
+| `monthly_sales`      | Monthly business trend         |
+
+---
+
+## ⚙️ Setup Instructions (Windows)
+
+### 1️⃣ Install Dependencies
+
 ```powershell
-# Install dependencies
 pip install -r requirements.txt
+```
 
-# Initialize Airflow
+---
+
+### 2️⃣ Prepare Input Data
+
+Place the following files in:
+
+```
+datalake/raw/
+- sales.csv
+- customers.csv
+```
+
+---
+
+### 3️⃣ Initialize Superset
+
+```powershell
 .\init_superset.ps1
-
-# Set Airflow home directory (optional)
-[Environment]::SetEnvironmentVariable("AIRFLOW_HOME", "$PWD\airflow", "User")
 ```
 
-### Start Services
+This will:
+
+* Initialize Superset database
+* Create default admin user
+* Set up roles and permissions
+
+---
+
+### 4️⃣ Start Services
+
+**Option 1: Airflow Standalone Mode**
+
 ```powershell
-# Terminal 1: Start Airflow webserver
-airflow webserver --port 8080
-
-# Terminal 2: Start Airflow scheduler
-airflow scheduler
-
-# Terminal 3: Start Superset
-.\run_superset.ps1
-```
-
-### Or Use Standalone Mode
-```powershell
-# Single command (includes webserver + scheduler)
 airflow standalone
 ```
 
-### Trigger ETL Pipeline
+**Option 2: Manual Services**
+
 ```powershell
-# Via CLI (trigger manually)
+airflow webserver --port 8080
+airflow scheduler
+```
+
+**Start Superset**
+
+```powershell
+.\run_superset.ps1
+```
+
+* Airflow UI → [http://localhost:8080](http://localhost:8080)
+* Superset UI → [http://localhost:8088](http://localhost:8088)
+* Superset Login → `admin / admin`
+
+---
+
+## ▶️ Trigger ETL Pipeline
+
+```powershell
 airflow dags trigger data_lake_etl_pipeline
-
-# Or access Airflow UI at http://localhost:8080
-# Login → data_lake_etl_pipeline DAG → Trigger
 ```
 
-### Run Spark ETL Directly
+You may also trigger the DAG directly from the **Airflow Web UI**.
+
+---
+
+## 🧪 Run Spark ETL Manually
+
 ```powershell
-# Execute ETL standalone
 spark-submit spark/spark_etl.py
-
-# With custom memory allocation
-spark-submit --driver-memory 4g --executor-memory 4g spark/spark_etl.py
-
-# With local cluster (8 cores)
-spark-submit --master local[8] spark/spark_etl.py
 ```
 
-### Check Execution Status
+With custom memory:
+
 ```powershell
-# View Airflow logs
-airflow logs --dag-id data_lake_etl_pipeline
-
-# View specific task logs
-airflow logs --dag-id data_lake_etl_pipeline --task-id run_spark_etl
-
-# List all DAG runs
-airflow dags list-runs --dag-id data_lake_etl_pipeline
-
-# Check warehouse tables created
-ls datalake/warehouse/
+spark-submit --driver-memory 4g --executor-memory 4g spark/spark_etl.py
 ```
 
-## Query Data
+---
 
-### SQL in Superset
-```sql
--- Top 10 Products by Revenue
-SELECT product, total_revenue, total_quantity 
-FROM revenue_by_product 
-ORDER BY total_revenue DESC 
-LIMIT 10;
+## 🗄️ Convert Warehouse Parquet to SQLite (For Superset)
 
--- Revenue by Region
-SELECT region, total_revenue, total_orders 
-FROM revenue_by_region 
-ORDER BY total_revenue DESC;
-
--- Customer Spending Analysis
-SELECT customer_name, customer_city, total_spent, total_purchases
-FROM customer_summary
-ORDER BY total_spent DESC
-LIMIT 20;
+```powershell
+python tools/parquet_to_sqlite.py
 ```
 
-### Pandas
-```python
-import pandas as pd
+This generates:
 
-# Load revenue by product
-df = pd.read_parquet("datalake/warehouse/revenue_by_product/data.parquet")
-print(df.head(10))
-
-# Load customer summary
-df = pd.read_parquet("datalake/warehouse/customer_summary/data.parquet")
-print(df.sort_values('total_spent', ascending=False).head())
-
-# Load monthly sales trend
-df = pd.read_parquet("datalake/warehouse/monthly_sales/data.parquet")
-print(df)
+```
+datalake/warehouse.db
 ```
 
-### PySpark
-```python
-from pyspark.sql import SparkSession
+which is used as the **Superset data source**.
 
-spark = SparkSession.builder.appName("QueryWarehouse").getOrCreate()
+---
 
-# Query revenue by product
-df = spark.read.parquet("datalake/warehouse/revenue_by_product")
-df.show(10, truncate=False)
+## ⭐ Key Features
 
-# Query customer summary
-df = spark.read.parquet("datalake/warehouse/customer_summary")
-df.filter(df.total_spent > 1000).show()
+* Fully automated **daily ETL pipeline**
+* **Spark + Pandas fallback system**
+* Multi-layer **On-Premise Data Lake architecture**
+* Workflow monitoring with **Apache Airflow**
+* Interactive dashboards with **Apache Superset**
+* Lightweight **SQLite warehouse integration**
 
-# Perform SQL queries
-df.createOrReplaceTempView("revenue_by_product")
-spark.sql("SELECT * FROM revenue_by_product WHERE total_revenue > 500").show()
-```
 
-## Troubleshooting
 
-| Issue | Solution |
-|-------|----------|
-| File not found | Verify CSV files in `datalake/raw/` |
-| Java error | Install Java 17+, set JAVA_HOME |
-| DAG not visible | Restart Airflow webserver |
-| Memory error | Increase: `--driver-memory 4g` |
+---
 
-## Documentation
+## 📚 References
 
-- [Apache Spark](https://spark.apache.org/docs/latest/)
-- [Apache Airflow](https://airflow.apache.org/docs/)
-- [Apache Superset](https://superset.apache.org/)
+* Apache Spark Documentation
+* Apache Airflow Documentation
+* Apache Superset Documentation
 
-## License
+---
 
-## Author:
-Gaurav Kumar(MSA24002)
-DATA MINING AND WAREHOUSING ASSIGNEMT 
+## 👨‍🎓 Author
+
+* Gaurav Kumar (MSA24002)
+* Course: Data Mining and Warehousing Laboratory
+* Project Type:** On-Premises Data Lake Implementation
+
+---
