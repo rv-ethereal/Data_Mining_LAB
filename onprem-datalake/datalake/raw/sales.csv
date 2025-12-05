@@ -1,0 +1,302 @@
+id,date,cust_id,product,price,qty,discount_percent,region,payment_method,status
+1,2024-02-16,158.0,Smartwatch,3920.77,4,0,Central,Cash,Completed
+2,2024-11-29,49.0,Mobile,19497.34,4,5,East,Net Banking,Completed
+3,2024-06-24,183.0,Mobile,19505.23,4,0,North,Debit Card,Completed
+4,2024-11-08,41.0,Monitor,29819.72,2,0,East,UPI,Completed
+5,2024-11-19,166.0,Speaker,7431.18,1,0,East,Credit Card,Completed
+6,2024-12-02,247.0,Camera,31365.88,3,10,Central,UPI,Completed
+7,2024-12-01,179.0,Tablet,33334.93,1,0,West,Credit Card,Completed
+8,2024-03-06,172.0,Camera,45739.73,1,0,Central,Cash,Completed
+9,2024-04-19,88.0,Mobile,18625.98,1,0,West,Debit Card,Completed
+10,2024-10-03,214.0,Smartwatch,13133.14,1,0,Central,UPI,Pending
+11,2024-03-24,47.0,Mouse,522.78,1,10,Central,Debit Card,Completed
+12,2024-05-01,249.0,Mobile,19108.59,3,5,West,Cash,Completed
+13,2024-08-28,232.0,Headphone,2237.87,4,0,South,Net Banking,Returned
+14,2024-09-14,136.0,Monitor,25388.77,3,15,West,Debit Card,Completed
+15,2024-09-03,224.0,Tablet,32460.04,1,0,East,Credit Card,Completed
+16,2024-03-23,70.0,Keyboard,2627.92,1,15,West,Debit Card,Completed
+17,2024-08-18,227.0,Laptop,77856.53,1,15,East,Cash,Completed
+18,2024-02-11,96.0,Keyboard,1434.9,1,0,South,Credit Card,Completed
+19,2024-05-26,235.0,Speaker,8331.05,1,5,West,Debit Card,Completed
+20,2024-02-10,5.0,Monitor,18972.03,1,0,East,Debit Card,Completed
+21,2024-05-27,61.0,Mouse,1197.21,1,0,East,Debit Card,Completed
+22,2024-09-12,153.0,Mouse,1077.09,1,0,Central,Net Banking,Completed
+23,2024-06-29,62.0,Tablet,20825.44,1,0,Central,Credit Card,Completed
+24,2024-09-16,,Speaker,2541.43,2,0,Central,Cash,Pending
+25,2024-05-09,192.0,Mobile,21356.71,15,0,North,Credit Card,Completed
+26,2024-06-19,35.0,Laptop,70860.05,3,0,North,UPI,Completed
+27,2024-12-22,123.0,Tablet,31607.67,3,10,South,Credit Card,Completed
+28,2024-04-12,227.0,Monitor,10739.68,1,0,North,UPI,Completed
+29,2024-11-27,49.0,Keyboard,1683.5,1,0,East,Credit Card,Pending
+30,2024-08-11,228.0,Speaker,4185.73,3,5,West,Cash,Completed
+31,2024-09-22,69.0,Tablet,24924.06,2,5,North,Credit Card,Completed
+32,2024-02-10,84.0,Tablet,25909.49,1,0,East,Net Banking,Completed
+33,2024-01-22,187.0,Tablet,28795.3,1,5,East,Cash,Completed
+34,2024-07-05,132.0,Mobile,15750.41,2,15,South,Debit Card,Completed
+35,2024-11-26,94.0,Monitor,10695.98,1,0,East,Net Banking,Completed
+36,2024-07-09,114.0,Tablet,28581.24,5,0,North,Net Banking,Completed
+37,2024-02-28,7.0,Speaker,7196.49,1,0,South,Cash,Pending
+38,2024-08-16,55.0,Laptop,50471.07,1,0,Central,Cash,Completed
+39,2024-12-31,114.0,Tablet,32056.53,2,10,North,UPI,Completed
+40,2024-06-02,218.0,Laptop,61999.89,1,5,South,Debit Card,Completed
+41,2024-03-12,61.0,Keyboard,1060.6,15,0,West,Net Banking,Completed
+42,2024-11-09,227.0,Monitor,26073.23,2,0,North,Cash,Returned
+43,2024-10-21,19.0,Monitor,20513.91,3,20,South,Credit Card,Completed
+44,2024-10-09,164.0,Keyboard,1361.29,4,0,Central,Debit Card,Completed
+45,2024-06-04,43.0,Mobile,23313.91,2,0,South,Debit Card,Completed
+46,2024-05-08,51.0,Keyboard,2737.31,4,0,Central,UPI,Completed
+47,2024-10-24,40.0,Laptop,60102.93,1,5,South,Net Banking,Completed
+48,2024-02-11,12.0,Mouse,370.03,4,0,Central,Debit Card,Completed
+49,2024-11-17,140.0,Camera,44724.34,1,5,East,UPI,Completed
+50,2024-01-31,41.0,Camera,31897.35,1,0,West,Cash,Completed
+51,2024-06-12,188.0,Mouse,544.24,4,20,East,Debit Card,Completed
+52,2024-08-26,32.0,Keyboard,1904.13,1,0,East,Debit Card,Completed
+53,2024-08-02,64.0,Smartwatch,14344.62,4,10,South,Net Banking,Completed
+54,2024-09-20,120.0,Headphone,4052.49,2,10,West,Cash,Completed
+55,2024-04-20,150.0,Camera,40217.78,10,0,East,UPI,Completed
+56,2024-02-25,111.0,Monitor,15714.97,1,10,South,UPI,Completed
+57,2024-10-14,50.0,Speaker,2361.94,1,0,East,Credit Card,Completed
+58,2024-11-15,175.0,Monitor,25288.08,1,0,Central,Credit Card,Completed
+59,2024-03-14,51.0,Speaker,6462.65,1,0,Central,Net Banking,Completed
+60,2024-08-30,133.0,Mobile,16370.36,1,0,West,Net Banking,Completed
+61,2024-11-11,190.0,Mouse,841.5,1,0,East,Net Banking,Completed
+62,2024-08-31,209.0,Keyboard,1724.62,2,0,North,Credit Card,Cancelled
+63,2024-12-18,162.0,Mouse,823.05,4,0,North,UPI,Cancelled
+64,2024-10-25,123.0,Mouse,1281.98,3,0,South,Net Banking,Completed
+65,2024-01-17,147.0,Camera,25911.03,3,0,North,Cash,Completed
+66,2024-09-13,199.0,Tablet,23259.2,1,15,Central,Credit Card,Completed
+67,2024-12-05,123.0,Keyboard,1018.35,1,0,Central,Debit Card,Completed
+68,2024-12-14,165.0,Keyboard,1355.82,1,5,East,Debit Card,Cancelled
+69,2024-06-01,198.0,Smartwatch,9697.04,1,5,East,Cash,Completed
+70,2024-05-20,74.0,Speaker,6483.9,5,0,North,Net Banking,Completed
+71,2024-03-15,75.0,Camera,52735.1,10,0,North,Credit Card,Completed
+72,2024-04-19,52.0,Monitor,23119.44,3,0,Central,Net Banking,Completed
+73,2024-05-02,63.0,Tablet,17184.53,3,5,North,Net Banking,Completed
+74,2024-08-29,26.0,Headphone,1209.96,2,0,South,Net Banking,Cancelled
+75,2024-08-31,123.0,Tablet,23138.15,5,5,South,UPI,Completed
+76,2024-10-20,60.0,Mobile,24079.37,1,5,Central,Credit Card,Pending
+77,2024-01-19,215.0,Tablet,23357.7,4,5,West,Debit Card,Cancelled
+78,2024-10-17,155.0,Smartwatch,13520.92,1,15,North,UPI,Completed
+79,2024-03-09,218.0,Keyboard,1810.8,4,0,Central,Debit Card,Completed
+80,2024-05-11,184.0,Speaker,3299.95,2,0,South,UPI,Completed
+81,2024-11-08,220.0,Mouse,1446.48,1,10,West,Net Banking,Completed
+82,2024-03-12,123.0,Camera,46770.23,1,15,East,Credit Card,Completed
+83,2024-06-17,78.0,Headphone,2786.94,1,5,Central,Credit Card,Completed
+84,2024-03-01,120.0,Speaker,7542.15,1,0,East,Net Banking,Pending
+85,2024-05-31,95.0,Smartwatch,11283.48,2,0,Central,Debit Card,Completed
+86,2024-07-31,180.0,Monitor,24954.7,2,15,Central,Net Banking,Completed
+87,2024-11-01,224.0,Headphone,4047.44,3,0,North,Net Banking,Completed
+88,2024-10-07,232.0,Laptop,76689.79,1,0,Central,Net Banking,Completed
+89,2024-12-14,53.0,Speaker,8835.89,2,0,Central,Net Banking,Completed
+90,2024-08-21,145.0,Mobile,19534.32,2,0,North,UPI,Completed
+91,2024-04-21,149.0,Camera,30178.29,1,0,North,UPI,Completed
+92,2024-02-05,240.0,Keyboard,2985.31,5,0,West,Cash,Completed
+93,2024-11-26,247.0,Tablet,30316.55,10,0,West,Cash,Completed
+94,2024-12-04,224.0,Camera,35025.82,3,0,Central,UPI,Completed
+95,2024-04-24,214.0,Keyboard,1482.65,1,5,North,UPI,Completed
+96,2024-04-27,64.0,Keyboard,1560.32,1,0,West,UPI,Completed
+97,2024-11-10,197.0,Laptop,41288.69,3,0,North,Credit Card,Completed
+98,2024-01-25,63.0,Mobile,19464.41,3,0,North,Debit Card,Completed
+99,2024-04-29,209.0,Mobile,16401.36,20,0,Central,Net Banking,Completed
+100,2024-12-04,134.0,Speaker,3895.23,4,0,South,UPI,Completed
+101,2024-11-16,174.0,Mouse,1795.51,5,0,West,Credit Card,Cancelled
+102,2024-08-01,105.0,Camera,51432.18,1,0,South,Debit Card,Completed
+103,2024-12-28,37.0,Monitor,14819.36,1,15,West,Net Banking,Completed
+104,2024-05-04,66.0,Camera,42291.47,1,0,South,Credit Card,Pending
+105,2024-04-07,14.0,Speaker,2739.71,3,0,East,Net Banking,Completed
+106,2024-12-09,144.0,Laptop,47526.53,3,0,South,UPI,Completed
+107,2024-03-01,192.0,Mobile,17118.08,1,15,West,Net Banking,Completed
+108,2024-05-24,98.0,Camera,56605.06,2,0,West,UPI,Completed
+109,2024-02-20,206.0,Speaker,6102.53,2,5,West,UPI,Pending
+110,2024-04-23,190.0,Speaker,4503.38,1,0,South,Net Banking,Cancelled
+111,2024-04-10,85.0,Mouse,1524.02,1,0,South,Debit Card,Completed
+112,2024-11-24,190.0,Speaker,4058.61,4,0,West,UPI,Completed
+113,2024-10-04,165.0,Keyboard,1720.79,5,0,North,Credit Card,Cancelled
+114,2024-11-18,60.0,Mobile,22643.39,2,5,North,Credit Card,Completed
+115,2024-12-07,240.0,Monitor,17464.01,2,15,Central,Cash,Completed
+116,2024-09-28,185.0,Keyboard,1879.11,1,0,East,UPI,Completed
+117,2024-02-24,236.0,Camera,52246.71,5,0,North,Debit Card,Completed
+118,2024-07-22,21.0,Keyboard,1131.05,1,15,East,Cash,Completed
+119,2024-02-11,168.0,Headphone,2199.9,4,0,North,Cash,Completed
+120,2024-03-28,22.0,Monitor,11122.3,1,10,West,UPI,Completed
+121,2024-04-27,55.0,Laptop,75791.65,5,0,Central,Credit Card,Pending
+122,2024-01-17,46.0,Smartwatch,13791.74,2,0,East,Debit Card,Completed
+123,2024-10-15,62.0,Camera,57155.0,1,10,Central,Cash,Completed
+124,2024-03-12,203.0,Keyboard,1329.32,3,0,North,UPI,Completed
+125,2024-11-05,197.0,Camera,29285.76,1,15,Central,Cash,Cancelled
+126,2024-08-18,126.0,Speaker,2237.01,1,0,South,Cash,Completed
+127,2024-11-12,76.0,Mouse,1423.14,1,5,South,Credit Card,Completed
+128,2024-07-18,82.0,Camera,48467.09,2,0,East,Credit Card,Cancelled
+129,2024-03-08,23.0,Monitor,17198.35,1,0,South,Net Banking,Completed
+130,2024-10-10,24.0,Camera,24131.72,1,0,Central,UPI,Pending
+131,2024-02-13,186.0,Mobile,17918.47,1,15,Central,Debit Card,Completed
+132,2024-05-17,78.0,Tablet,28706.32,1,0,East,Credit Card,Completed
+133,2024-02-09,93.0,Smartwatch,8053.23,2,15,East,Cash,Completed
+134,2024-01-04,243.0,Headphone,2831.45,1,0,West,Net Banking,Completed
+135,2024-11-29,250.0,Speaker,5521.78,2,0,Central,UPI,Completed
+136,2024-07-22,248.0,Headphone,2916.04,1,0,East,Cash,Cancelled
+137,2024-07-20,94.0,Headphone,2303.54,1,15,North,Debit Card,Completed
+138,2024-01-14,244.0,Keyboard,949.82,3,15,West,Debit Card,Completed
+139,2024-07-28,173.0,Smartwatch,12975.38,1,0,West,UPI,Completed
+140,2024-02-07,115.0,Tablet,29304.73,3,0,Central,Cash,Completed
+141,2024-07-03,180.0,Camera,41745.81,3,0,Central,Credit Card,Completed
+142,2024-11-27,157.0,Headphone,3630.41,1,0,North,Cash,Cancelled
+143,2024-01-06,26.0,Speaker,9725.73,2,0,East,Net Banking,Completed
+144,2024-08-25,198.0,Mouse,675.75,1,5,Central,Debit Card,Completed
+145,2024-02-13,30.0,Mobile,19827.71,1,0,South,UPI,Completed
+146,2024-02-19,113.0,Headphone,3084.46,1,0,West,UPI,Completed
+147,2024-02-25,174.0,Laptop,40903.4,1,15,South,Debit Card,Completed
+148,2024-08-24,60.0,Keyboard,900.34,2,5,West,Debit Card,Completed
+149,2024-04-11,116.0,Camera,35823.3,3,0,Central,Credit Card,Completed
+150,2024-02-02,148.0,Headphone,2113.38,3,5,North,Net Banking,Completed
+151,2024-12-09,221.0,Speaker,3576.59,1,0,West,UPI,Completed
+152,2024-06-29,217.0,Mouse,967.32,1,5,West,UPI,Pending
+153,2024-03-01,62.0,Mouse,444.08,1,0,East,UPI,Completed
+154,2024-10-21,99.0,Keyboard,1471.16,2,0,West,Net Banking,Completed
+155,2024-03-12,48.0,Tablet,26098.25,2,10,East,Net Banking,Completed
+156,2024-04-09,209.0,Speaker,9614.74,2,15,West,Net Banking,Completed
+157,2024-08-15,126.0,Camera,47387.87,2,0,South,Credit Card,Completed
+158,2024-10-02,74.0,Headphone,2168.36,1,5,South,Net Banking,Completed
+159,2024-02-28,69.0,Monitor,20994.52,1,10,Central,UPI,Completed
+160,2024-04-21,109.0,Mobile,22600.04,2,5,North,Debit Card,Completed
+161,2024-02-14,113.0,Mobile,19497.32,1,5,North,Debit Card,Completed
+162,2024-11-08,162.0,Mouse,1471.53,4,0,West,Debit Card,Completed
+163,2024-09-29,72.0,Headphone,4221.76,2,0,Central,UPI,Cancelled
+164,2024-09-20,231.0,Smartwatch,6472.0,1,0,North,Cash,Pending
+165,2024-03-08,64.0,Smartwatch,13404.57,1,5,South,Debit Card,Completed
+166,2024-05-17,161.0,Camera,39578.35,2,0,West,Credit Card,Completed
+167,2024-12-21,240.0,Laptop,56114.03,3,0,East,Cash,Completed
+168,2024-02-17,188.0,Mobile,23689.08,4,5,West,UPI,Pending
+169,2024-04-18,127.0,Keyboard,1494.29,10,0,East,UPI,Completed
+170,2024-06-24,229.0,Mouse,522.01,4,0,North,Cash,Completed
+171,2024-08-07,52.0,Tablet,23825.72,1,10,South,UPI,Completed
+172,2024-02-12,96.0,Smartwatch,4120.08,1,0,South,UPI,Completed
+173,2024-02-18,1.0,Headphone,2716.92,1,0,South,Debit Card,Completed
+174,2024-12-22,88.0,Keyboard,2199.96,1,20,North,Cash,Completed
+175,2024-02-22,27.0,Monitor,11416.57,1,0,East,UPI,Completed
+176,2024-02-05,136.0,Tablet,27831.52,3,0,Central,Debit Card,Completed
+177,2024-07-29,158.0,Headphone,3512.32,1,10,West,Credit Card,Pending
+178,2024-07-15,90.0,Tablet,30048.91,2,0,West,Debit Card,Completed
+179,2024-11-07,73.0,Laptop,49926.68,2,10,North,UPI,Completed
+180,2024-05-31,166.0,Mouse,1166.19,3,5,North,Debit Card,Completed
+181,2024-02-06,136.0,Laptop,49643.27,2,20,North,UPI,Completed
+182,2024-03-29,196.0,Mouse,1015.47,2,15,West,Credit Card,Completed
+183,2024-01-31,243.0,Laptop,40551.74,1,0,West,Net Banking,Completed
+184,2024-10-01,138.0,Camera,48072.43,1,0,Central,Credit Card,Completed
+185,2024-03-20,138.0,Keyboard,2802.31,10,0,East,Credit Card,Completed
+186,2024-01-30,63.0,Camera,49198.34,4,15,North,Credit Card,Completed
+187,2024-12-02,190.0,Mouse,393.55,3,0,South,Debit Card,Completed
+188,2024-09-21,201.0,Tablet,24928.26,1,0,East,Debit Card,Completed
+189,2024-01-16,86.0,Smartwatch,11795.23,1,0,West,Credit Card,Completed
+190,2024-09-18,93.0,Mouse,1366.81,2,0,North,Net Banking,Completed
+191,2024-10-20,173.0,Tablet,20102.32,1,0,North,Net Banking,Completed
+192,,236.0,Mobile,17445.51,2,0,South,Credit Card,Completed
+193,2024-06-12,70.0,Camera,28980.61,1,0,North,Credit Card,Completed
+194,2024-01-24,245.0,Mobile,16793.44,4,0,West,Cash,Pending
+195,2024-01-05,95.0,Smartwatch,6927.61,2,0,South,UPI,Completed
+196,2024-09-09,198.0,Headphone,2855.71,2,5,South,Net Banking,Completed
+197,2024-01-13,60.0,Headphone,1602.27,5,0,Central,Credit Card,Cancelled
+198,2024-06-06,27.0,Mobile,22589.29,1,0,South,Debit Card,Completed
+199,2024-05-23,24.0,Mobile,24725.59,1,15,North,Net Banking,Completed
+200,2024-10-24,25.0,Speaker,5667.66,3,0,Central,Cash,Completed
+201,2024-03-07,61.0,Mouse,405.88,3,0,East,UPI,Pending
+202,2024-06-11,116.0,Camera,48029.02,3,0,East,Debit Card,Completed
+203,2024-08-18,120.0,Mouse,485.25,1,0,East,Net Banking,Completed
+204,2024-03-02,24.0,Headphone,2807.67,2,10,South,UPI,Completed
+205,2024-06-16,38.0,Mouse,368.56,4,5,North,UPI,Completed
+206,2024-03-30,8.0,Mobile,21771.83,1,10,West,Net Banking,Completed
+207,2024-03-12,32.0,Headphone,1378.9,1,0,North,Debit Card,Completed
+208,2024-11-26,22.0,Camera,34889.59,2,0,Central,Credit Card,Completed
+209,2024-03-06,24.0,Laptop,47910.01,2,0,East,Cash,Completed
+210,2024-09-11,8.0,Mouse,1036.37,3,5,West,Debit Card,Completed
+211,2024-03-17,9.0,Tablet,20499.64,2,5,Central,Debit Card,Completed
+212,2024-02-01,23.0,Monitor,18239.84,2,0,East,Cash,Completed
+213,2024-10-05,204.0,Keyboard,1122.87,20,20,North,UPI,Completed
+214,2024-06-13,100.0,Monitor,16880.68,2,0,East,UPI,Completed
+215,2024-01-30,208.0,Mobile,23957.65,3,0,West,Net Banking,Returned
+216,2024-05-16,137.0,Tablet,17002.69,3,5,North,Debit Card,Completed
+217,2024-03-29,46.0,Camera,34192.19,4,0,South,UPI,Pending
+218,2024-10-17,145.0,Mobile,22034.53,1,0,South,Debit Card,Completed
+219,2024-01-20,24.0,Monitor,20842.49,1,0,North,Debit Card,Completed
+220,2024-04-13,207.0,Monitor,10013.67,5,0,South,Debit Card,Pending
+221,2024-12-26,235.0,Speaker,2476.45,1,5,South,Net Banking,Pending
+222,2024-07-21,151.0,Laptop,54943.63,5,0,North,UPI,Completed
+223,2024-11-23,246.0,Tablet,29647.04,2,5,West,Debit Card,Completed
+224,2024-07-01,58.0,Keyboard,2233.9,5,10,Central,Cash,Completed
+225,2024-12-25,243.0,Smartwatch,4528.18,3,0,Central,Net Banking,Completed
+226,2024-11-09,57.0,Mouse,840.97,4,0,Central,Cash,Completed
+227,2024-03-26,163.0,Laptop,49519.84,15,10,North,UPI,Completed
+228,2024-06-28,66.0,Smartwatch,5516.21,3,5,North,Credit Card,Completed
+229,2024-09-09,226.0,Camera,58764.07,4,0,West,Cash,Completed
+230,2024-12-17,58.0,Monitor,25774.6,2,0,South,Credit Card,Completed
+231,2024-06-24,44.0,Speaker,4089.02,1,0,West,Credit Card,Completed
+232,2024-09-04,181.0,Laptop,53518.02,15,0,North,Debit Card,Completed
+233,2024-04-15,250.0,Camera,26284.15,1,0,South,Net Banking,Completed
+234,2024-05-01,25.0,Keyboard,1163.16,1,0,North,Net Banking,Completed
+235,2024-02-14,76.0,Tablet,16090.1,1,0,Central,Credit Card,Completed
+236,2024-08-30,217.0,Tablet,27763.81,10,0,North,Cash,Completed
+237,2024-04-04,95.0,Smartwatch,4093.64,2,0,West,Cash,Completed
+238,2024-05-17,145.0,Monitor,19301.16,1,0,North,Credit Card,Completed
+239,2024-10-28,59.0,Speaker,8465.44,2,0,Central,Cash,Completed
+240,2024-08-31,147.0,Camera,58625.11,3,0,South,Credit Card,Completed
+241,2024-10-19,174.0,Mobile,20021.01,5,0,Central,Cash,Completed
+242,2024-03-05,11.0,Tablet,34443.3,4,0,West,Cash,Completed
+243,2024-02-04,23.0,Tablet,31682.16,1,0,West,Net Banking,Completed
+244,2024-01-07,202.0,Smartwatch,9236.26,5,0,Central,Cash,Completed
+245,2024-02-21,237.0,Tablet,17963.99,2,0,North,Credit Card,Completed
+246,2024-05-15,99.0,Keyboard,2700.34,4,0,West,Cash,Completed
+247,2024-12-14,178.0,Smartwatch,7835.69,2,0,West,UPI,Completed
+248,2024-07-09,6.0,Mobile,22457.5,5,10,East,UPI,Completed
+249,2024-04-26,35.0,Monitor,27164.7,3,20,East,Cash,Completed
+250,2024-11-26,23.0,Speaker,4155.36,2,0,South,Cash,Completed
+251,2024-09-20,203.0,Keyboard,2667.97,4,0,South,Net Banking,Completed
+252,2024-04-08,225.0,Keyboard,2698.33,1,10,South,Debit Card,Completed
+253,2024-05-20,,Mobile,24180.31,3,0,West,Credit Card,Completed
+254,2024-03-31,246.0,Headphone,2489.87,2,0,West,UPI,Completed
+255,2024-05-25,8.0,Smartwatch,11987.53,3,0,West,Net Banking,Completed
+256,2024-12-12,53.0,Headphone,4428.44,2,5,East,Net Banking,Completed
+257,2024-03-29,154.0,Mobile,19740.97,1,0,North,Net Banking,Completed
+258,2024-05-20,109.0,Smartwatch,11552.89,3,10,West,Cash,Completed
+259,2024-11-15,102.0,Monitor,16042.9,2,0,Central,Net Banking,Returned
+260,2024-05-24,77.0,Speaker,6491.66,2,0,North,UPI,Returned
+261,2024-12-30,244.0,Speaker,8891.93,1,0,East,Net Banking,Completed
+262,2024-11-03,104.0,Mobile,23054.3,4,5,East,Credit Card,Completed
+263,2024-07-17,189.0,Smartwatch,6113.12,2,0,North,Net Banking,Completed
+264,2024-09-30,164.0,Speaker,7812.4,1,15,West,UPI,Completed
+265,2024-04-02,76.0,Tablet,31812.77,4,0,North,UPI,Completed
+266,2024-12-14,231.0,Keyboard,2407.3,1,5,East,Debit Card,Completed
+267,2024-07-09,67.0,Smartwatch,8045.67,4,0,Central,Credit Card,Completed
+268,2024-08-29,228.0,Mouse,1286.53,2,0,South,Cash,Completed
+269,2024-03-11,52.0,Camera,22162.48,4,0,East,Net Banking,Pending
+270,2024-04-02,200.0,Monitor,12864.48,4,0,North,Debit Card,Completed
+271,2024-03-27,148.0,Mobile,15047.14,1,0,South,Credit Card,Completed
+272,2024-09-01,99.0,Camera,45339.5,2,0,North,Debit Card,Completed
+273,2024-09-28,49.0,Mobile,23920.06,3,5,North,Debit Card,Completed
+274,2024-09-14,151.0,Speaker,4496.74,1,0,East,Credit Card,Completed
+275,2024-09-25,87.0,Smartwatch,8471.12,2,10,West,Debit Card,Completed
+276,2024-07-25,5.0,Monitor,17185.02,1,0,South,Debit Card,Completed
+277,2024-07-06,183.0,Mobile,20896.93,1,0,North,UPI,Completed
+278,2024-12-04,28.0,Mouse,382.6,20,0,North,Credit Card,Completed
+279,2024-12-25,40.0,Camera,24943.8,1,5,South,Credit Card,Completed
+280,2024-11-06,180.0,Laptop,66499.32,1,0,South,Credit Card,Completed
+281,2024-02-24,128.0,Mouse,500.15,1,5,South,UPI,Completed
+282,2024-03-23,11.0,Headphone,2431.69,2,0,Central,Debit Card,Completed
+283,2024-12-09,23.0,Monitor,16612.07,1,10,North,Cash,Completed
+284,2024-02-21,232.0,Laptop,71181.05,1,5,East,Cash,Returned
+285,2024-03-30,224.0,Smartwatch,6169.5,1,10,North,UPI,Completed
+286,2024-01-24,3.0,Speaker,5407.96,1,5,South,Debit Card,Completed
+287,2024-02-17,96.0,Monitor,29101.78,1,0,East,Cash,Completed
+288,2024-09-01,205.0,Monitor,15436.66,1,5,West,Debit Card,Completed
+289,2024-02-23,107.0,Mobile,24815.69,4,0,Central,Net Banking,Completed
+290,2024-11-09,8.0,Tablet,27226.46,3,0,South,Cash,Completed
+291,2024-12-01,81.0,Camera,37627.52,1,5,North,Net Banking,Completed
+292,2024-12-08,224.0,Mouse,1530.42,1,0,East,Net Banking,Completed
+293,2024-11-24,99.0,Headphone,2927.72,3,10,South,Net Banking,Pending
+294,2024-03-21,130.0,Mouse,392.76,2,10,West,Debit Card,Completed
+295,2024-05-22,13.0,Monitor,16412.68,1,0,Central,Cash,Completed
+296,2024-10-20,115.0,Headphone,1315.32,2,10,North,Cash,Completed
+297,2024-07-25,106.0,Monitor,24904.78,1,0,North,Credit Card,Completed
+298,2024-09-17,144.0,Mouse,1937.39,2,5,South,Cash,Cancelled
+299,2024-08-20,85.0,Speaker,8602.49,4,5,Central,Net Banking,Completed
+300,2024-12-03,57.0,Speaker,7727.31,1,0,North,UPI,Completed
+210,2024-09-11,8.0,Mouse,1036.37,3,5,West,Debit Card,Completed
