@@ -7,6 +7,8 @@ import os
 # getting project path
 PROJECT_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
 
+
+
 def check_files():
     # just checking if files exist before running spark
     raw_path = os.path.join(PROJECT_PATH, "datalake/raw")
