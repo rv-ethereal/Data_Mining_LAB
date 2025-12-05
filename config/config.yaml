@@ -1,0 +1,56 @@
+# Project Configuration
+project:
+  name: "On-Premise Data Lake Pipeline"
+  version: "1.0.0"
+  author: "Susanta Kumar Mohanty"
+
+# Paths
+paths:
+  project_root: "/home/sushi/Downloads/spark-airflow-datalake-project"
+  datalake_root: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake"
+  raw: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake/raw"
+  staging: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake/staging"
+  processed: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake/processed"
+  warehouse: "/home/sushi/Downloads/spark-airflow-datalake-project/datalake/warehouse"
+  logs: "/home/sushi/Downloads/spark-airflow-datalake-project/logs"
+
+# Docker paths (for container environment)
+paths:
+  project_root: "/opt/airflow"
+  datalake_root: "/opt/airflow/datalake"
+  raw: "/opt/airflow/datalake/raw"
+  staging: "/opt/airflow/datalake/staging"
+  processed: "/opt/airflow/datalake/processed"
+  warehouse: "/opt/airflow/datalake/warehouse"
+  logs: "/opt/airflow/logs"
+
+# Spark Configuration
+spark:
+  app_name: "DataLake-ETL-Pipeline"
+  master: "local[*]"
+  driver_memory: "4g"
+  executor_memory: "4g"
+  executor_cores: 2
+
+# Airflow Configuration
+airflow:
+  dag_id: "spark_etl_pipeline"
+  schedule_interval: "@daily"
+  start_date: "2024-01-01"
+  catchup: false
+
+# Database Configuration (PostgreSQL for Superset)
+database:
+  type: "postgresql"
+  host: "localhost"
+  port: 5432
+  name: "datalake_warehouse"
+  user: "postgres"
+  password: "postgres"
+
+# Data Generation Settings
+data_generation:
+  num_customers: 1000
+  num_products: 100
+  num_sales_records: 10000
+  date_range_days: 365

@@ -1,0 +1,75 @@
+# Python
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Airflow
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/logs/
+airflow/webserver_config.py
+airflow/*.pid
+
+# Superset
+.superset/
+superset.db
+
+# Data Lake (large files)
+datalake/raw/*.csv
+datalake/raw/*.json
+datalake/staging/*
+datalake/processed/*
+datalake/warehouse/*
+
+# Logs
+logs/*.log
+*.log
+
+# Process IDs
+pids.txt
+
+# Environment
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.backup
+*.bak
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Spark
+metastore_db/
+spark-warehouse/
+derby.log
+
+# Keep directory structure but ignore content
+!datalake/raw/.gitkeep
+!datalake/staging/.gitkeep
+!datalake/processed/.gitkeep
+!datalake/warehouse/.gitkeep
+!logs/.gitkeep
