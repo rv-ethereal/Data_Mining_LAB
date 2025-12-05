@@ -1,0 +1,29 @@
+# python stuff
+.venv/
+venv/
+*.pyc
+__pycache__/
+*.egg-info/
+*.ps1/
+# airflow stuff
+airflow_home/
+logs/
+airflow.db
+airflow.cfg
+
+# data files
+datalake/raw/*.csv
+datalake/processed/
+datalake/warehouse/
+*.db
+*.parquet
+
+# ide stuff
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# os stuff
+.DS_Store
+Thumbs.db
