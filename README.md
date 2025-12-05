@@ -8,7 +8,7 @@
 
 **Data Mining Laboratory Project**
 
-**Under the guidance of *Prof. Sandeep Kumar Srivastava***
+**Under the guidance of _Prof. Sandeep Kumar Srivastava_**
 
 </div>
 
@@ -34,11 +34,11 @@ This repository contains a **complete on-premise data engineering pipeline** bui
 
 Key components:
 
-* Local Data Lake (raw / staging / processed)
-* Apache Spark (PySpark) ETL
-* Apache Airflow DAG-based orchestration
-* Local warehouse (Parquet / SQLite / optional PostgreSQL)
-* Apache Superset dashboards for analytics
+- Local Data Lake (raw / staging / processed)
+- Apache Spark (PySpark) ETL
+- Apache Airflow DAG-based orchestration
+- Local warehouse (Parquet / SQLite / optional PostgreSQL)
+- Apache Superset dashboards for analytics
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,24 +103,24 @@ datalake/
 
 **Storage**
 
-* Local File System (Data Lake)
+- Local File System (Data Lake)
 
 **Processing**
 
-* Apache Spark (PySpark)
+- Apache Spark (PySpark)
 
 **Workflow Orchestration**
 
-* Apache Airflow (DAGs)
+- Apache Airflow (DAGs)
 
 **Analytics**
 
-* Apache Superset
+- Apache Superset
 
 **Warehouse**
 
-* Parquet
-* SQLite / (PostgreSQL optional)
+- Parquet
+- SQLite / (PostgreSQL optional)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,23 +165,23 @@ Processed datasets are stored as parquet files or optionally as SQL tables (SQLi
 
 Typical dashboards:
 
-* Revenue by month
-* Sales trend analysis
-* Region-wise sales map
-* Top products by revenue
-* Customer distribution by location
-* Return/Refund analysis
+- Revenue by month
+- Sales trend analysis
+- Region-wise sales map
+- Top products by revenue
+- Customer distribution by location
+- Return/Refund analysis
 
 ---
 
 ## 🎯 Final Deliverables
 
-* ✅ Complete On-Prem Data Lake
-* ✅ Spark ETL PySpark Scripts
-* ✅ Airflow DAG (scheduler + operators)
-* ✅ Structured Warehouse (Parquet / SQL)
-* ✅ Superset Dashboards (6–10 charts)
-* ✅ Architecture Diagram + Documentation
+- ✅ Complete On-Prem Data Lake
+- ✅ Spark ETL PySpark Scripts
+- ✅ Airflow DAG (scheduler + operators)
+- ✅ Structured Warehouse (Parquet / SQL)
+- ✅ Superset Dashboards (6–10 charts)
+- ✅ Architecture Diagram + Documentation
 
 ---
 
@@ -219,9 +219,9 @@ git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
 ## 📞 Contact
 
-**Student:** *Yuvraj Das*
+**Student:** _Kshitij_
 
-**Enrollment no:** *MSA24022*
+**Enrollment no:** _MSD24012_
 
 **Instructor:** Prof. Sandeep Kumar Srivastava
 
