@@ -1,0 +1,100 @@
+{"product_id": 1, "product_name": "Laptop Bag", "category": "Accessories", "price": 1499}
+{"product_id": 2, "product_name": "Wireless Mouse", "category": "Electronics", "price": 799}
+{"product_id": 3, "product_name": "Bluetooth Headphones", "category": "Electronics", "price": 1999}
+{"product_id": 4, "product_name": "Sports Shoes", "category": "Footwear", "price": 2499}
+{"product_id": 5, "product_name": "Water Bottle", "category": "Lifestyle", "price": 299}
+{"product_id": 6, "product_name": "T-Shirt", "category": "Clothing", "price": 499}
+{"product_id": 7, "product_name": "Backpack", "category": "Accessories", "price": 1299}
+{"product_id": 8, "product_name": "Smart Watch", "category": "Electronics", "price": 3499}
+{"product_id": 9, "product_name": "Notebook", "category": "Stationery", "price": 99}
+{"product_id": 10, "product_name": "Sunglasses", "category": "Fashion", "price": 899}
+{"product_id": 11, "product_name": "Desk Lamp", "category": "Home Decor", "price": 699}
+{"product_id": 12, "product_name": "Keyboard", "category": "Electronics", "price": 999}
+{"product_id": 13, "product_name": "Office Chair", "category": "Furniture", "price": 5499}
+{"product_id": 14, "product_name": "Table Fan", "category": "Home Appliances", "price": 1299}
+{"product_id": 15, "product_name": "Power Bank", "category": "Electronics", "price": 1499}
+{"product_id": 16, "product_name": "USB Cable", "category": "Electronics", "price": 199}
+{"product_id": 17, "product_name": "Phone Case", "category": "Accessories", "price": 299}
+{"product_id": 18, "product_name": "Running Shorts", "category": "Sportswear", "price": 899}
+{"product_id": 19, "product_name": "Cap", "category": "Fashion", "price": 199}
+{"product_id": 20, "product_name": "Coffee Mug", "category": "Kitchen", "price": 149}
+{"product_id": 21, "product_name": "Cookware Set", "category": "Kitchen", "price": 3499}
+{"product_id": 22, "product_name": "Pillow", "category": "Home Decor", "price": 499}
+{"product_id": 23, "product_name": "Bedsheet", "category": "Home Decor", "price": 899}
+{"product_id": 24, "product_name": "Electric Kettle", "category": "Home Appliances", "price": 1599}
+{"product_id": 25, "product_name": "Hair Dryer", "category": "Personal Care", "price": 1299}
+{"product_id": 26, "product_name": "Trimmer", "category": "Personal Care", "price": 999}
+{"product_id": 27, "product_name": "Perfume", "category": "Beauty", "price": 799}
+{"product_id": 28, "product_name": "Face Wash", "category": "Beauty", "price": 199}
+{"product_id": 29, "product_name": "Shampoo", "category": "Beauty", "price": 349}
+{"product_id": 30, "product_name": "Toothpaste", "category": "Personal Care", "price": 99}
+{"product_id": 31, "product_name": "Hand Sanitizer", "category": "Personal Care", "price": 49}
+{"product_id": 32, "product_name": "Rice Cooker", "category": "Kitchen Appliances", "price": 2299}
+{"product_id": 33, "product_name": "Mixer Grinder", "category": "Kitchen Appliances", "price": 3299}
+{"product_id": 34, "product_name": "Air Purifier", "category": "Home Appliances", "price": 7999}
+{"product_id": 35, "product_name": "Microwave Oven", "category": "Kitchen Appliances", "price": 9999}
+{"product_id": 36, "product_name": "Television", "category": "Electronics", "price": 24999}
+{"product_id": 37, "product_name": "Laptop Stand", "category": "Accessories", "price": 699}
+{"product_id": 38, "product_name": "Mouse Pad", "category": "Accessories", "price": 199}
+{"product_id": 39, "product_name": "Pen Drive", "category": "Electronics", "price": 599}
+{"product_id": 40, "product_name": "Hard Disk", "category": "Electronics", "price": 4499}
+{"product_id": 41, "product_name": "SSD Drive", "category": "Electronics", "price": 5499}
+{"product_id": 42, "product_name": "Router", "category": "Electronics", "price": 1999}
+{"product_id": 43, "product_name": "LED Bulb", "category": "Home Appliances", "price": 149}
+{"product_id": 44, "product_name": "Air Cooler", "category": "Home Appliances", "price": 5999}
+{"product_id": 45, "product_name": "Smartphone", "category": "Electronics", "price": 15999}
+{"product_id": 46, "product_name": "Tripod", "category": "Accessories", "price": 999}
+{"product_id": 47, "product_name": "Camera Lens", "category": "Electronics", "price": 17999}
+{"product_id": 48, "product_name": "Gaming Keyboard", "category": "Electronics", "price": 2999}
+{"product_id": 49, "product_name": "Gaming Mouse", "category": "Electronics", "price": 1499}
+{"product_id": 50, "product_name": "Office Table", "category": "Furniture", "price": 6499}
+{"product_id": 51, "product_name": "Sofa Cover", "category": "Home Decor", "price": 699}
+{"product_id": 52, "product_name": "Curtains", "category": "Home Decor", "price": 999}
+{"product_id": 53, "product_name": "Door Mat", "category": "Home Decor", "price": 199}
+{"product_id": 54, "product_name": "Carpet", "category": "Home Decor", "price": 1599}
+{"product_id": 55, "product_name": "Wall Clock", "category": "Home Decor", "price": 499}
+{"product_id": 56, "product_name": "Photo Frame", "category": "Home Decor", "price": 299}
+{"product_id": 57, "product_name": "Electric Iron", "category": "Home Appliances", "price": 699}
+{"product_id": 58, "product_name": "Induction Cooktop", "category": "Kitchen Appliances", "price": 2499}
+{"product_id": 59, "product_name": "Pressure Cooker", "category": "Kitchen", "price": 1999}
+{"product_id": 60, "product_name": "Casserole Set", "category": "Kitchen", "price": 999}
+{"product_id": 61, "product_name": "Lunch Box", "category": "Kitchen", "price": 399}
+{"product_id": 62, "product_name": "Cutlery Set", "category": "Kitchen", "price": 799}
+{"product_id": 63, "product_name": "Blender", "category": "Kitchen Appliances", "price": 1299}
+{"product_id": 64, "product_name": "Chopper", "category": "Kitchen Appliances", "price": 699}
+{"product_id": 65, "product_name": "Vacuum Cleaner", "category": "Home Appliances", "price": 5999}
+{"product_id": 66, "product_name": "Heater", "category": "Home Appliances", "price": 2999}
+{"product_id": 67, "product_name": "Hair Straightener", "category": "Personal Care", "price": 1499}
+{"product_id": 68, "product_name": "Nail Kit", "category": "Beauty", "price": 299}
+{"product_id": 69, "product_name": "Makeup Brush", "category": "Beauty", "price": 499}
+{"product_id": 70, "product_name": "Face Cream", "category": "Beauty", "price": 399}
+{"product_id": 71, "product_name": "Bath Towel", "category": "Home Essentials", "price": 399}
+{"product_id": 72, "product_name": "Shower Gel", "category": "Personal Care", "price": 249}
+{"product_id": 73, "product_name": "Shaving Foam", "category": "Personal Care", "price": 199}
+{"product_id": 74, "product_name": "Deodorant", "category": "Personal Care", "price": 199}
+{"product_id": 75, "product_name": "Gym Gloves", "category": "Sportswear", "price": 499}
+{"product_id": 76, "product_name": "Yoga Mat", "category": "Sportswear", "price": 899}
+{"product_id": 77, "product_name": "Dumbbells", "category": "Sports", "price": 1499}
+{"product_id": 78, "product_name": "Cricket Bat", "category": "Sports", "price": 1299}
+{"product_id": 79, "product_name": "Football", "category": "Sports", "price": 499}
+{"product_id": 80, "product_name": "Tennis Racket", "category": "Sports", "price": 2499}
+{"product_id": 81, "product_name": "LED Strip Light", "category": "Home Decor", "price": 599}
+{"product_id": 82, "product_name": "Study Lamp", "category": "Home Decor", "price": 799}
+{"product_id": 83, "product_name": "Bean Bag", "category": "Furniture", "price": 1899}
+{"product_id": 84, "product_name": "Bookshelf", "category": "Furniture", "price": 4999}
+{"product_id": 85, "product_name": "Plastic Container", "category": "Kitchen", "price": 149}
+{"product_id": 86, "product_name": "Glass Set", "category": "Kitchen", "price": 399}
+{"product_id": 87, "product_name": "Chopping Board", "category": "Kitchen", "price": 199}
+{"product_id": 88, "product_name": "Spoon Set", "category": "Kitchen", "price": 149}
+{"product_id": 89, "product_name": "Wall Painting", "category": "Home Decor", "price": 999}
+{"product_id": 90, "product_name": "Desk Organizer", "category": "Stationery", "price": 299}
+{"product_id": 91, "product_name": "Stapler", "category": "Stationery", "price": 149}
+{"product_id": 92, "product_name": "Marker Pens", "category": "Stationery", "price": 99}
+{"product_id": 93, "product_name": "Glue Stick", "category": "Stationery", "price": 49}
+{"product_id": 94, "product_name": "Calculator", "category": "Stationery", "price": 299}
+{"product_id": 95, "product_name": "Rucksack", "category": "Accessories", "price": 1999}
+{"product_id": 96, "product_name": "Jeans", "category": "Clothing", "price": 1299}
+{"product_id": 97, "product_name": "Formal Shirt", "category": "Clothing", "price": 999}
+{"product_id": 98, "product_name": "Jacket", "category": "Clothing", "price": 2499}
+{"product_id": 99, "product_name": "Sneakers", "category": "Footwear", "price": 2999}
+{"product_id": 100, "product_name": "Slippers", "category": "Footwear", "price": 399}

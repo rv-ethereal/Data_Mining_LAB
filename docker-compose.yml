@@ -1,0 +1,135 @@
+###############################
+# DOCKER COMPOSE FOR DATA LAKE
+###############################
+
+services:
+
+  ###########################
+  # Spark Master
+  ###########################
+  spark-master:
+    image: spark:3.4.1
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+    entrypoint: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.master.Master"]
+    ports:
+      - "7077:7077"
+      - "8080:8080"
+    volumes:
+      - ./spark:/opt/spark-apps
+      - ./datalake:/datalake
+    networks:
+      - datalake-net
+
+  ###########################
+  # Spark Worker
+  ###########################
+  spark-worker:
+    image: spark:3.4.1
+    container_name: spark-worker
+    depends_on:
+      - spark-master
+    environment:
+      - SPARK_MODE=worker
+    entrypoint: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "spark://spark-master:7077"]
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./spark:/opt/spark-apps
+      - ./datalake:/datalake
+    networks:
+      - datalake-net
+
+  ###########################
+  # Postgres (Airflow DB)
+  ###########################
+  postgres:
+    image: postgres:13
+    container_name: airflow-postgres
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - datalake-net
+
+  ###########################
+  # Airflow Webserver
+  ###########################
+  airflow-webserver:
+    image: apache/airflow:2.7.1
+    container_name: airflow-webserver
+    depends_on:
+      - postgres
+    ports:
+      - "8085:8080"
+    environment:
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+      AIRFLOW__CORE__FERNET_KEY: "myfernetkey"
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./datalake:/datalake
+    command: >
+      bash -c "
+      airflow db upgrade &&
+      airflow users create --username admin --password admin --firstname Admin --lastname User --role Admin --email admin@example.com &&
+      airflow webserver
+      "
+    networks:
+      - datalake-net
+
+  ###########################
+  # Airflow Scheduler
+  ###########################
+  airflow-scheduler:
+    image: apache/airflow:2.7.1
+    container_name: airflow-scheduler
+    depends_on:
+      - airflow-webserver
+      - postgres
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./datalake:/datalake
+    command: airflow scheduler
+    networks:
+      - datalake-net
+
+  ###########################
+  # Superset (FIXED)
+  ###########################
+  superset:
+    image: apache/superset:latest
+    container_name: superset
+    ports:
+      - "8088:8088"
+    environment:
+      - SUPERSET_ENV=production
+      - SECRET_KEY=my_super_random_secret_key_123456789     # ✅ FIX APPLIED
+    volumes:
+      - ./superset_config.py:/app/pythonpath/superset_config.py   # 👈 FIX
+      - ./datalake:/datalake
+    networks:
+      - datalake-net
+    command: >
+      /bin/bash -c "
+      superset db upgrade &&
+      superset fab create-admin --username admin --firstname Sup --lastname User --email admin@example.com --password admin &&
+      superset init &&
+      superset run -p 8088 --with-threads --reload --debugger
+      "
+
+###########################
+# Volumes & Networks
+###########################
+volumes:
+  postgres_data:
+
+networks:
+  datalake-net:
+    driver: bridge

@@ -1,0 +1,72 @@
+# --------------------------
+# Python
+# --------------------------
+_pycache_/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+.eggs/
+*.log
+*.sqlite
+.env
+venv/
+env/
+*.db
+
+# --------------------------
+# Airflow
+# --------------------------
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/logs/
+airflow/*.pid
+airflow/dags/_pycache_/
+
+# --------------------------
+# Spark Temporary Files
+# --------------------------
+spark-warehouse/
+.metastore/
+derby.log
+
+# --------------------------
+# Parquet + Analytics Output
+# (Keep only raw and warehouse folders)
+# --------------------------
+datalake/analytics/*/
+datalake/analytics/*/._SUCCESS.crc
+datalake/analytics//.crc
+
+# --------------------------
+# VS Code
+# --------------------------
+.vscode/
+.history/
+*.code-workspace
+
+# --------------------------
+# OS Files
+# --------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --------------------------
+# Docker
+# --------------------------
+**/.docker/
+**/.dockerignore
+**/docker.log
+
+# Ignore containers’ internal tmp files
+tmp/
+*.pid
+
+# --------------------------
+# Logs
+# --------------------------
+*.log
+logs/
+log/
