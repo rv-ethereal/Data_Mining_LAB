@@ -1,0 +1,21 @@
+
+pandas>=2.1.0
+numpy>=1.26.0
+pyarrow>=14.0.0
+
+# PySpark for ETL
+pyspark>=3.5.0
+
+# Apache Airflow (works with Flask 2.2.x)
+apache-airflow==2.6.3
+apache-airflow-providers-apache-spark==4.1.3
+
+# Database & Analytics
+duckdb==0.8.1
+SQLAlchemy==1.4.49
+
+# DO NOT install Apache Superset with Airflow - they have Flask conflicts
+# If you need Superset, install it in a separate virtual environment
+
+# Utilities
+python-dateutil==2.8.2
