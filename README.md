@@ -200,13 +200,13 @@ git add .
 git remote add origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
 # Commit your changes
-git commit -m "msa24021 repo push"
+git commit -m "msa24011 repo push"
 
 # Create and switch to your own branch (replace with your enrollment number)
-git checkout -b msa24021
+git checkout -b msa24011
 
 # Push ONLY to your own branch — NOT to main
-git push origin msa24021
+git push origin msa24011
 ```
 
 > If `origin` already exists and you need to update it, run:
@@ -231,11 +231,11 @@ git remote set-url origin https://github.com/rv-ethereal/Data_Mining_LAB.git
 
 ---
 
-## 📞 Contact
+##  Contact
 
-**Student:** *Add your name here*
+**Student:** *Sakshi Vedi*
 
-**Enrollment no:** *Add your name here*
+**Enrollment no:** *MSA24011*
 
 **Instructor:** Prof. Sandeep Kumar Srivastava
 
