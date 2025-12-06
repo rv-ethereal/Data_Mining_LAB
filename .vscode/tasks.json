@@ -1,0 +1,60 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Superset (Docker)",
+            "type": "shell",
+            "command": "docker-compose up -d",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Stop Superset",
+            "type": "shell",
+            "command": "docker-compose down",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Restart & Rebuild Superset",
+            "type": "shell",
+            "command": "docker-compose up -d --build --force-recreate",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "View Superset Logs",
+            "type": "shell",
+            "command": "docker-compose logs -f --tail=100",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "isBackground": true,
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Spark ETL",
+            "type": "shell",
+            "command": ".\\venv\\Scripts\\python spark\\spark_etl.py",
+            "windows": {
+                "command": ".\\venv\\Scripts\\python spark\\spark_etl.py"
+            },
+            "unix": {
+                "command": "./venv/bin/python spark/spark_etl.py"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "group": "test"
+        }
+    ]
+}

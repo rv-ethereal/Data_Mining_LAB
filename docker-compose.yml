@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+  superset:
+    build: .
+    ports:
+      - "8088:8088"
+    environment:
+      - SUPERSET_SECRET_KEY=thisismysecretkey123456789
+      - SUPERSET_ADMIN_CREATE=true
+    volumes:
+      - ./datalake:/app/datalake
