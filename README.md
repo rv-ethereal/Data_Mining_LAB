@@ -76,19 +76,19 @@ This project is developed as part of the **Data Mining and Warehousing Laborator
 ```
 onprem-datalake/
 ├── airflow/dags/
-│   └── spark_etl_dag.py        # Daily Airflow ETL pipeline
+│   └── spark_etl_dag.py
 ├── spark/
-│   └── spark_etl.py            # Spark ETL with Pandas fallback
+│   └── spark_etl.py
 ├── tools/
-│   └── parquet_to_sqlite.py    # Warehouse Parquet → SQLite converter
+│   └── parquet_to_sqlite.py
 ├── datalake/
-│   ├── raw/                    # Input CSV files
-│   ├── processed/              # Cleaned Parquet data
-│   └── warehouse/              # Aggregated analytics tables
-├── app.py                      # Superset application entry
-├── superset_config.py          # Superset configuration
-├── init_superset.ps1           # Superset initialization script
-├── run_superset.ps1            # Script to start Superset
+│   ├── raw/
+│   ├── processed/
+│   └── warehouse/
+├── app.py
+├── superset_config.py
+├── init_superset.ps1
+├── run_superset.ps1
 ├── requirements.txt
 └── README.md
 ```
@@ -113,14 +113,14 @@ The Spark ETL also includes a **Pandas fallback mode** to ensure execution even 
 
 ## 📊 Warehouse Analytics Tables
 
-| Table Name           | Description                    |
-| -------------------- | ------------------------------ |
-| `revenue_by_product` | Product-wise sales and revenue |
-| `revenue_by_region`  | Regional business performance  |
-| `payment_analysis`   | Payment method statistics      |
-| `status_summary`     | Order status distribution      |
-| `customer_summary`   | Customer purchase behavior     |
-| `monthly_sales`      | Monthly business trend         |
+| Table Name         | Description                    |
+| ------------------ | ------------------------------ |
+| revenue_by_product | Product-wise sales and revenue |
+| revenue_by_region  | Regional business performance  |
+| payment_analysis   | Payment method analysis        |
+| status_summary     | Order status distribution      |
+| customer_summary   | Customer purchase summary      |
+| monthly_sales      | Monthly sales trend            |
 
 ---
 
@@ -156,34 +156,36 @@ This will:
 
 * Initialize Superset database
 * Create default admin user
-* Set up roles and permissions
+* Configure roles and permissions
 
 ---
 
 ### 4️⃣ Start Services
 
-**Option 1: Airflow Standalone Mode**
+#### Option 1: Airflow Standalone
 
 ```powershell
 airflow standalone
 ```
 
-**Option 2: Manual Services**
+#### Option 2: Manual Mode
 
 ```powershell
 airflow webserver --port 8080
 airflow scheduler
 ```
 
-**Start Superset**
+#### Start Superset
 
 ```powershell
 .\run_superset.ps1
 ```
 
-* Airflow UI → [http://localhost:8080](http://localhost:8080)
-* Superset UI → [http://localhost:8088](http://localhost:8088)
-* Superset Login → `admin / admin`
+**Access URLs:**
+
+* Airflow: [http://localhost:8080](http://localhost:8080)
+* Superset: [http://localhost:8088](http://localhost:8088)
+* Login: admin / admin
 
 ---
 
@@ -193,7 +195,7 @@ airflow scheduler
 airflow dags trigger data_lake_etl_pipeline
 ```
 
-You may also trigger the DAG directly from the **Airflow Web UI**.
+Or from Airflow Web UI.
 
 ---
 
@@ -203,7 +205,7 @@ You may also trigger the DAG directly from the **Airflow Web UI**.
 spark-submit spark/spark_etl.py
 ```
 
-With custom memory:
+With memory:
 
 ```powershell
 spark-submit --driver-memory 4g --executor-memory 4g spark/spark_etl.py
@@ -211,32 +213,123 @@ spark-submit --driver-memory 4g --executor-memory 4g spark/spark_etl.py
 
 ---
 
-## 🗄️ Convert Warehouse Parquet to SQLite (For Superset)
+## 🗄️ Convert Warehouse Parquet to SQLite
 
 ```powershell
 python tools/parquet_to_sqlite.py
 ```
 
-This generates:
+Output:
 
 ```
 datalake/warehouse.db
 ```
 
-which is used as the **Superset data source**.
+Used as the Superset data source.
+
+---
+
+## 🖥️ ✅ Complete Final Execution Flow (For Viva & Demo)
+
+### Step 1: Open Project in VS Code
+
+```powershell
+cd onprem-datalake
+```
+
+### Step 2: Install Dependencies
+
+```powershell
+pip install -r requirements.txt
+```
+
+### Step 3: Start Airflow
+
+```powershell
+airflow standalone
+```
+
+### Step 4: Trigger ETL Pipeline
+
+```powershell
+airflow dags trigger data_lake_etl_pipeline
+```
+
+### Step 5: Verify Output Data
+
+Check:
+
+```
+datalake/processed/
+datalake/warehouse/
+```
+
+### Step 6: Convert to SQLite for Superset
+
+```powershell
+python tools/parquet_to_sqlite.py
+```
+
+### Step 7: Start Superset
+
+```powershell
+.\run_superset.ps1
+```
+
+### Step 8: Open Dashboard
+
+```
+http://localhost:8088
+Login: admin / admin
+Dashboards → Sales Analytics Dashboard
+```
+
+---
+
+## 📈 Superset Dashboard Visualizations
+
+1. **Revenue by Product** – Area Chart
+2. **Revenue by Region** – Pie Chart
+3. **Monthly Sales Trend** – Line Chart
+
+These charts provide real-time business intelligence from warehouse data.
 
 ---
 
 ## ⭐ Key Features
 
-* Fully automated **daily ETL pipeline**
-* **Spark + Pandas fallback system**
-* Multi-layer **On-Premise Data Lake architecture**
-* Workflow monitoring with **Apache Airflow**
-* Interactive dashboards with **Apache Superset**
-* Lightweight **SQLite warehouse integration**
+* Fully automated daily ETL pipeline
+* Spark + Pandas fallback system
+* Multi-layer on-premise data lake
+* Workflow orchestration using Apache Airflow
+* Interactive analytics via Apache Superset
+* Lightweight SQLite warehouse
 
+---
 
+## ✅ Results & Observations
+
+* End-to-end data pipeline executed successfully
+* Airflow DAG runs without failure
+* Spark processes raw data accurately
+* Analytics tables generated correctly
+* Superset dashboards display correct business insights
+
+---
+
+## 🚀 Limitations & Future Enhancements
+
+**Current Limitations:**
+
+* SQLite used instead of enterprise data warehouse
+* Single-node Spark execution
+
+**Future Improvements:**
+
+* PostgreSQL / Hive integration
+* Kafka-based real-time ingestion
+* Cloud deployment on AWS or GCP
+* Role-based Superset access
 
 ---
 
@@ -250,8 +343,8 @@ which is used as the **Superset data source**.
 
 ## 👨‍🎓 Author
 
-* Gaurav Kumar (MSA24002)
-* Course: Data Mining and Warehousing Laboratory
-* Project Type:** On-Premises Data Lake Implementation
+**Gaurav Kumar (MSA24002)**
+Course: Data Mining and Warehousing Laboratory
+Project Type: **On-Premises Data Lake Implementation**
 
 ---
