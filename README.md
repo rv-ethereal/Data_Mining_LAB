@@ -330,8 +330,8 @@ These charts provide real-time business intelligence from warehouse data.
 
 ## 👨‍🎓 Author
 
-**Gaurav Kumar (MSA24002)**
-Course: Data Mining and Warehousing Laboratory
-Project Type: **On-Premises Data Lake Implementation**
+* Gaurav Kumar (MSA24002)
+* Course: Data Mining and Warehousing Laboratory
+* Project Type: **On-Premises Data Lake Implementation**
 
 ---
