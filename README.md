@@ -8,7 +8,7 @@ This project demonstrates the full **Raw → Processed → Warehouse → Analyti
 
 ---
 
-## 🎯 Project Objective
+##  Project Objective
 
 To design and implement a **local data lake architecture** that:
 
@@ -22,7 +22,7 @@ This project is developed as part of the **Data Mining and Warehousing Laborator
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -199,7 +199,7 @@ Or from Airflow Web UI.
 
 ---
 
-## 🧪 Run Spark ETL Manually
+##  Run Spark ETL Manually
 
 ```powershell
 spark-submit spark/spark_etl.py
@@ -213,7 +213,7 @@ spark-submit --driver-memory 4g --executor-memory 4g spark/spark_etl.py
 
 ---
 
-## 🗄️ Convert Warehouse Parquet to SQLite
+##  Convert Warehouse Parquet to SQLite
 
 ```powershell
 python tools/parquet_to_sqlite.py
@@ -229,7 +229,7 @@ Used as the Superset data source.
 
 ---
 
-## 🖥️ ✅ Complete Final Execution Flow (For Viva & Demo)
+## 🖥️  Complete Final Execution Flow (For Viva & Demo)
 
 ### Step 1: Open Project in VS Code
 
@@ -315,21 +315,8 @@ These charts provide real-time business intelligence from warehouse data.
 * Analytics tables generated correctly
 * Superset dashboards display correct business insights
 
----
 
-## 🚀 Limitations & Future Enhancements
 
-**Current Limitations:**
-
-* SQLite used instead of enterprise data warehouse
-* Single-node Spark execution
-
-**Future Improvements:**
-
-* PostgreSQL / Hive integration
-* Kafka-based real-time ingestion
-* Cloud deployment on AWS or GCP
-* Role-based Superset access
 
 ---
 
